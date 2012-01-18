@@ -14,7 +14,7 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-size: 100%;
+    font: normal 100% Cambria, Georgia, serif;
 }
 header {
     height: 56px;
@@ -37,6 +37,7 @@ header .left {
     font-family: sans-serif;
     left: 30px;
     width: 300px;
+    padding: 2px;
 }
 
 #city_name {
@@ -46,6 +47,7 @@ header .left {
 #blurb {
     font-size: 0.675em;
     color: #C0C0C0;
+    font-weight: bold;
 }
 
 header .right {

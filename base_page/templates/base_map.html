@@ -63,7 +63,7 @@
         </div>
         <footer>
             <div class="left">
-                <a id="feedback" href="{% block feedback_page_url %}#{% endblock %}" target="_blank">
+                <a id="feedback" href="{% url feedback %}" target="_blank">
                     {% trans "Give feedback" %}
                 </a>
             </div>
@@ -74,7 +74,7 @@
                     </a>
                 </div>
                 <div id="logo">
-                    <img alt="logo" src="{{ STATIC_URL }}images/pehmogis-logo.png" />
+                    <img alt="pehmogis" src="{{ STATIC_URL }}images/pehmogis-logo.png" />
                 </div>
             </div>
         </footer>

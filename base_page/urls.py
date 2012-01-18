@@ -7,6 +7,9 @@ urlpatterns = patterns('base_page.views',
             url(r'^setlang/',
                 'set_language',
                 name='set_language'),
+            url(r'^feedback/',
+                'feedback',
+                name='feedback'),
         )
 
 

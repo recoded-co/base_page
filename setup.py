@@ -11,7 +11,8 @@ setup(
     package_data = {
         "base_page": [
             "templates/*.html",
-            "static/css/*.css"
+            "static/css/*.css",
+            "static/images/*.png",
         ],
     },
     zip_safe=False,
