@@ -53,6 +53,7 @@ header .right {
     left: 370px;
     right: 0%;
     height: 100%;
+    padding: 5px;
 }
 
 #languages {
