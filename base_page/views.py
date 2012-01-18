@@ -1,25 +1,32 @@
+from django.conf import settings
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import translation
 from forms import FeedbackForm
 from models import Feedback
+from models import SiteSettings
 
 def set_language(request):
+    
     next = request.REQUEST.get('next', None)
     if not next:
         next = request.META.get('HTTP_REFERER', None)
     if not next:
         next = '/'
-    response = http.HttpResponseRedirect(next)
+    response = HttpResponseRedirect(next)
+    
     if request.method == 'GET':
-        lang_code = request.GET.get('language', None)
-        if lang_code and check_for_language(lang_code):
+        
+        lang_code = request.GET.get('lang', None)
+        
+        if lang_code and translation.check_for_language(lang_code):
+        
             if hasattr(request, 'session'):
                 request.session['django_language'] = lang_code
             else:
                 response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
-            translation.activate(lang_code)
+
     return response
 
 def feedback(request):
@@ -64,5 +71,10 @@ def test(request, template_name):
     """
     This view is made only for testing the templates
     """
+    try:
+        site_settings = SiteSettings.objects.get(site = settings.SITE_ID)
+    except SiteSettings.DoesNotExist:
+        site_settings = {}
     return render_to_response('%s.html' % template_name,
+                              {'site_settings': site_settings},
                               context_instance = RequestContext(request))

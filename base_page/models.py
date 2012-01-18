@@ -1,3 +1,4 @@
+from django.contrib.sites.models import Site
 from django.db import models
 from django.conf import settings
 from django.core.mail import send_mail
@@ -33,3 +34,10 @@ class Feedback(models.Model):
     def __unicode__(self):
         return "feedback " + str(self.create_time)
         
+
+class SiteSettings(models.Model):
+    site = models.ForeignKey(Site, unique=True)
+    city_name = models.CharField(max_length=30,
+                                 default='City')
+    background_color = models.CharField(max_length=7,
+                                        default='#e8ae6a')

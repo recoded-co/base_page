@@ -15,10 +15,10 @@
     <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" type="image/x-icon" />
     <style type="text/css">
     .bgcolor {
-        background-color: {% block bgcolor %}#e8ae6a{% endblock %};
+        background-color: {% block bgcolor %}{{ site_settings.background_color }}{% endblock %};
     }
     .textcolor {
-        color: {% block textcolor %}#e8ae6a{% endblock %};
+        color: {% block textcolor %}{{ site_settings.background_color }}{% endblock %};
     }
     </style>
     </head>
@@ -28,7 +28,7 @@
                 <div id="city_logo">
                     <div id="city_name" class="textcolor">
                         {% block city_name %}
-                        City
+                        {{ site_settings.city_name }}
                         {% endblock %}
                     </div>
                     <div id="blurb">
@@ -41,9 +41,11 @@
             <div class="right">
                 <div id="languages">
                     {% for lang in LANGUAGES %}
-                        <a href="{% url set_language %}?language={{ lang.0 }}&next={{ request.path }}">
+                        {% ifnotequal LANGUAGE_CODE lang.0 %}
+                        <a href="{% url set_language %}?lang={{ lang.0 }}">
                             {% trans "in" %} {{ lang.1 }}
                         </a>
+                        {% endifnotequal %}
                     {% endfor %}
                 </div>
             </div>
