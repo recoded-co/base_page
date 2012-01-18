@@ -1,7 +1,9 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import translation
 from forms import FeedbackForm
+from models import Feedback
 
 def set_language(request):
     next = request.REQUEST.get('next', None)
@@ -27,7 +29,11 @@ def feedback(request):
     """
     if (request.method == 'GET'):
         form = FeedbackForm();
-        next = request.GET.get('next', '/')
+        next = request.GET.get('next', None)
+        if next == None:
+            next = request.META.get('HTTP_REFERER',
+                                    '/')
+            
         return render_to_response('feedback.html',
                                 {'form': form,
                                  'next': next},
@@ -49,7 +55,8 @@ def feedback(request):
             feedback = Feedback(content = cleaned_data['content'])
             feedback.save()
             
-            next = cleaned_data['next']       
+            next = request.POST.get('next', '/')
+            
             return HttpResponseRedirect(next)
             
 
