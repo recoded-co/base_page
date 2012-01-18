@@ -34,6 +34,8 @@ header .left {
 header .left #logo {
     width: 22.162162162162162%;
     height: 39.285714285714285%;
+    max-width: 82px;
+    max-height: 22px;
 }
 
 header .left #city_name {
