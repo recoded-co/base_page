@@ -71,10 +71,5 @@ def test(request, template_name):
     """
     This view is made only for testing the templates
     """
-    try:
-        site_settings = SiteSettings.objects.get(site = settings.SITE_ID)
-    except SiteSettings.DoesNotExist:
-        site_settings = {}
     return render_to_response('%s.html' % template_name,
-                              {'site_settings': site_settings},
                               context_instance = RequestContext(request))

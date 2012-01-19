@@ -15,12 +15,14 @@
     <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" type="image/x-icon" />
     <style type="text/css">
     .bgcolor {
-        background-color: {% block bgcolor %}{{ site_settings.background_color }}{% endblock %};
+        background-color: {% block bgcolor %}#e8ae6a{% endblock %};
     }
     .textcolor {
-        color: {% block textcolor %}{{ site_settings.background_color }}{% endblock %};
+        color: {% block textcolor %}#e8ae6a{% endblock %};
     }
     </style>
+    {% block stylesheet %}
+    {% endblock %}
     </head>
     <body class="bgcolor">
         <header>
@@ -28,7 +30,7 @@
                 <div id="city_logo">
                     <div id="city_name" class="textcolor">
                         {% block city_name %}
-                        {{ site_settings.city_name }}
+                        City
                         {% endblock %}
                     </div>
                     <div id="blurb">
@@ -80,5 +82,7 @@
                 </div>
             </div>
         </footer>
+        {% block javascript %}
+        {% endblock %}
     </body>
 </html>

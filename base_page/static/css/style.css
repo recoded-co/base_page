@@ -63,6 +63,7 @@ header .right {
     right: 0px;
     width: 100px;
 }
+
 #languages a {
     display: block;
     color: white;
@@ -76,17 +77,29 @@ header .right {
     width: 100%;
     background-color: white;
     border-bottom-left-radius: 6.974921% 14.957983%;
-    overflow: hidden;
 }
 
 #main .left {
     float: left;
     width: 370px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#content {
 }
 
 #main .right {
     right: 0%;
     left: 370px;
+}
+
+#map {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 370px;
+    right: 0px;
 }
 
 footer {
