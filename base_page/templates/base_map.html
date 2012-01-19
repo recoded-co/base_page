@@ -24,7 +24,7 @@
     {% block stylesheet %}
     {% endblock %}
     </head>
-    <body class="bgcolor">
+    <body class="bgcolor {% block body_class %}{% endblock %}">
         <header>
             <div class="left">
                 <div id="city_logo">
@@ -53,14 +53,14 @@
             </div>
         </header>
         <div id="main">
-            <div class="left">
+            <div class="bleft">
                 <div id="content">
                     {% block content %}
                     some content can be added here
                     {% endblock %}
                 </div>
             </div>
-            <div class="right">
+            <div class="bright">
                 <div id="map">
                 </div>
             </div>

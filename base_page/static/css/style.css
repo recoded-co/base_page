@@ -79,7 +79,7 @@ header .right {
     border-bottom-left-radius: 6.974921% 14.957983%;
 }
 
-#main .left {
+#main .bleft {
     float: left;
     width: 370px;
     height: 100%;
@@ -89,7 +89,7 @@ header .right {
 #content {
 }
 
-#main .right {
+#main .bright {
     right: 0%;
     left: 370px;
 }
