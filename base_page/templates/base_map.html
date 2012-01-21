@@ -1,28 +1,29 @@
 {% load i18n %}
 <!doctype html>
-<head>
-    <meta charset="utf-8">
-
-    <title>
-        {% block title %}
-        test page set title here
-        {% endblock %}
-    </title>
-  
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+<html>
+    <head>
+        <meta charset="utf-8">
     
-    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" type="image/x-icon" />
-    <style type="text/css">
-    .bgcolor {
-        background-color: {% block bgcolor %}#e8ae6a{% endblock %};
-    }
-    .textcolor {
-        color: {% block textcolor %}#e8ae6a{% endblock %};
-    }
-    </style>
-    {% block stylesheet %}
-    {% endblock %}
+        <title>
+            {% block title %}
+            test page set title here
+            {% endblock %}
+        </title>
+      
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+        
+        <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" type="image/x-icon" />
+        {% block stylesheet %}
+        {% endblock %}
+        <style type="text/css">
+        .bgcolor {
+            background-color: {% block bgcolor %}#e8ae6a{% endblock %};
+        }
+        .textcolor {
+            color: {% block textcolor %}#e8ae6a{% endblock %};
+        }
+        </style>
     </head>
     <body class="bgcolor {% block body_class %}{% endblock %}">
         <header>

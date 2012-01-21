@@ -13,6 +13,7 @@ setup(
             "templates/*.html",
             "static/css/*.css",
             "static/images/*.png",
+            "static/images/*.gif",
         ],
     },
     zip_safe=False,
