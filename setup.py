@@ -14,7 +14,9 @@ setup(
             "static/css/*.css",
             "static/images/*.png",
             "static/images/*.gif",
-            "static/javascript/*.js"
+            "static/javascript/*.js",
+            "locale/fi/LC_MESSAGES/*.mo",
+            "locale/fi/LC_MESSAGES/*.po",
         ],
     },
     zip_safe=False,
