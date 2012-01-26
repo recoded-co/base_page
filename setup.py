@@ -14,6 +14,7 @@ setup(
             "static/css/*.css",
             "static/images/*.png",
             "static/images/*.gif",
+            "static/javascript/*.js"
         ],
     },
     zip_safe=False,
