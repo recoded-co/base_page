@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-26 06:16-0600\n"
-"PO-Revision-Date: 2012-01-26 14:33+0200\n"
+"POT-Creation-Date: 2012-02-10 11:09+0200\n"
+"PO-Revision-Date: 2012-02-10 11:12+0200\n"
 "Last-Translator: Kristoffer Snabb <kristoffer.snabb@geonition.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,13 +17,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/base_map.html:49
+#: templates/base_map.html:35
+msgid "Your browser is"
+msgstr "Selaimesi"
+
+#: templates/base_map.html:35
+msgid "ancient"
+msgstr "vanha"
+
+#: templates/base_map.html:35
+msgid "Upgrade to a different browser"
+msgstr "Päivitä selaimesi"
+
+#: templates/base_map.html:35
+msgid "or"
+msgstr "tai"
+
+#: templates/base_map.html:35
+msgid "install Google Chrome Frame"
+msgstr "asenna Google Chrome"
+
+#: templates/base_map.html:35
+msgid "to experience this site"
+msgstr "kokeaksesi tätä palvelua"
+
+#: templates/base_map.html:57
 msgid "in"
 msgstr " "
 
-#: templates/base_map.html:72
-msgid "Give feedback"
-msgstr "Anna palautetta"
+#: templates/base_map.html:80
+#, fuzzy
+msgid "Give feedback for the service"
+msgstr "Anna palautetta palvelusta"
 
 #: templates/feedback.html:6
 msgid "Give some feedback for the service"
@@ -31,7 +56,7 @@ msgstr "Anna palautetta palvelusta"
 
 #: templates/feedback.html:12
 msgid "Palautetta"
-msgstr ""
+msgstr "Palautetta"
 
 #: templates/feedback.html:15
 msgid "You can write your feedback in the textbox below"
@@ -41,3 +66,5 @@ msgstr "Voit antaa palautetta allaolevaan tekstikenttään"
 msgid "Send feedback"
 msgstr "Lähetä palaute"
 
+#~ msgid "Give feedback"
+#~ msgstr "Anna palautetta"
