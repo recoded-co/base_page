@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-02-10 11:09+0200\n"
-"PO-Revision-Date: 2012-02-10 11:12+0200\n"
+"PO-Revision-Date: 2012-02-10 11:15+0200\n"
 "Last-Translator: Kristoffer Snabb <kristoffer.snabb@geonition.org>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -43,10 +43,9 @@ msgstr "kokeaksesi tätä palvelua"
 
 #: templates/base_map.html:57
 msgid "in"
-msgstr " "
+msgstr "  "
 
 #: templates/base_map.html:80
-#, fuzzy
 msgid "Give feedback for the service"
 msgstr "Anna palautetta palvelusta"
 
