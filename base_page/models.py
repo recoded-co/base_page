@@ -2,6 +2,7 @@ from django.contrib.sites.models import Site
 from django.db import models
 from django.conf import settings
 from django.core.mail import send_mail
+from django.contrib.sites.managers import CurrentSiteManager
 
 class Feedback(models.Model):
     """
@@ -35,9 +36,18 @@ class Feedback(models.Model):
         return "feedback " + str(self.create_time)
         
 
-class SiteSettings(models.Model):
+class SiteSetting(models.Model):
     site = models.ForeignKey(Site, unique=True)
     city_name = models.CharField(max_length=30,
                                  default='City')
     background_color = models.CharField(max_length=7,
                                         default='#e8ae6a')
+    text_color = models.CharField(max_length=7,
+                                  default='#e8ae6a')                                    
+    title = models.CharField(max_length=50,
+                             default = 'test page')
+    blurb = models.CharField(max_length=30,
+                             default='Help us improve our City')
+    provider = models.CharField(max_length=10,
+                                default='Geonition')                         
+    on_site = CurrentSiteManager()                                                                                     
