@@ -26,9 +26,9 @@ header .left {
     float: left;
     width: 370px;
     height: 100%;
-    border-top-right-radius: 24.054054% 100%;
     background-color: white;
     overflow: hidden;
+    border-top-right-radius: 24.054054% 100%;
 }
 
 
@@ -53,7 +53,7 @@ header .left {
 header .right {
     position: absolute;
     left: 370px;
-    right: 0%;
+    right: 0px;
     height: 100%;
     padding: 5px;
 }
@@ -91,7 +91,10 @@ header .right {
 }
 
 #main .bright {
-    right: 0%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
     left: 370px;
 }
 
@@ -99,8 +102,12 @@ header .right {
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 370px;
+    left: 0px;
     right: 0px;
+}
+/* ie 7 fix for openlayers */
+.lt-ie8 .olMapViewport {
+    position: absolute !important;
 }
 
 footer {
