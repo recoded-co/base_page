@@ -30,6 +30,13 @@
         </style>
 
         <!--<script src="{{ STATIC_URL }}javascript/modernizr-2.5.2.min.js"></script>-->
+        <!--[if lt IE 9]>
+            <script>
+            document.createElement('header');
+            document.createElement('footer');
+            </script>
+        <![endif]-->
+
     </head>
     <body class="bgcolor {% block body_class %}{% endblock %}">
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.chromium.org/developers/how-tos/chrome-frame-getting-started -->
