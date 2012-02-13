@@ -9,7 +9,16 @@
 
         <title>
             {% block title %}
-            test page set title here
+            {% if settings %}
+            
+            {{settings.title}}
+            
+            {% else %}
+            
+            Test Page
+            
+            {%endif%}
+            
             {% endblock %}
         </title>
 
@@ -21,11 +30,23 @@
         {% endblock %}
         <style type="text/css">
         .bgcolor {
-            background-color: {% block bgcolor %}#e8ae6a{% endblock %};
-        }
+            background-color: {% block bgcolor %}
+            {% if settings %}
+            {{settings.background_color}}
+            {% else %}
+             #e8ae6a
+            {% endif %}
+            {% endblock %};
+                 }
         .textcolor {
-            color: {% block textcolor %}#e8ae6a{% endblock %};
-        }
+            color: {% block textcolor %}
+            {% if settings %}
+            {{settings.text_color}}
+            {% else %}
+             #e8ae6a
+            {% endif %}
+            {% endblock %};
+                   }
         </style>
     </head>
     <body class="bgcolor {% block body_class %}{% endblock %}">
@@ -37,12 +58,20 @@
                 <div id="city_logo">
                     <div id="city_name" class="textcolor">
                         {% block city_name %}
-                        City
+                        {% if settings %}
+                        {{ settings.city_name}}
+                        {% else %}
+                         City 
+                        {% endif %}
                         {% endblock %}
                     </div>
                     <div id="blurb">
                         {% block blurb %}
-                        Help us improve our city
+                        {% if settings %}
+                        {{ settings.blurb}}
+                        {% else %}
+                        Help us improve our City 
+                        {%endif%}
                         {% endblock %}
                     </div>
                 </div>
@@ -81,7 +110,12 @@
             <div class="right">
                 <div id="provider">
                     <a href="{% block provider_url %}#{% endblock %}" target="_blank">
-                        {% block provider_name %}Geonition{% endblock %} {% now "Y" %}
+                        {% block provider_name %}
+                        {% if settings %}
+                        {{ settings.provider}}
+                        {% else %}
+                        Geonition 
+                        {%endif%}{% endblock %} {% now "Y" %}
                     </a>
                 </div>
                 <div id="logo">

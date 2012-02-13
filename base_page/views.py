@@ -5,7 +5,7 @@ from django.template import RequestContext
 from django.utils import translation
 from forms import FeedbackForm
 from models import Feedback
-from models import SiteSettings
+from models import SiteSetting
 
 def set_language(request):
     
@@ -28,6 +28,8 @@ def set_language(request):
                 response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
 
     return response
+    
+        
 
 def feedback(request):
     
@@ -71,5 +73,11 @@ def test(request, template_name):
     """
     This view is made only for testing the templates
     """
+    try:
+        settings = SiteSetting.on_site.all()[0]
+    except IndexError:
+        settings = {}   
+    
     return render_to_response('%s.html' % template_name,
+                              {'settings':settings},
                               context_instance = RequestContext(request))
