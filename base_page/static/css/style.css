@@ -91,9 +91,9 @@ header .right {
 }
 
 #main .bright {
+    position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 370px;
     right: 0px;
     left: 370px;
 }
@@ -102,8 +102,12 @@ header .right {
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: 370px;
+    left: 0px;
     right: 0px;
+}
+/* ie 7 fix for openlayers */
+.lt-ie8 .olMapViewport {
+    position: absolute !important;
 }
 
 footer {
