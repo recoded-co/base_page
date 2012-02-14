@@ -20,8 +20,10 @@ class Feedback(models.Model):
     >>> mail.outbox[0].body
     'some feedback'
     """
+    site = models.ForeignKey(Site)
     content = models.TextField()
     create_time = models.DateTimeField(auto_now_add=True)
+    
 
     def save(self, *args, **kwargs):
         send_mail('Feedback for the softGIS application',
@@ -36,8 +38,8 @@ class Feedback(models.Model):
         return "feedback " + str(self.create_time)
         
 
-class SiteSetting(models.Model):
-    site = models.ForeignKey(Site, unique=True)
+class CitySetting(models.Model):
+    site = models.ForeignKey(Site, unique = True)
     city_name = models.CharField(max_length=30,
                                  default='City')
     background_color = models.CharField(max_length=7,

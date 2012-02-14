@@ -9,9 +9,9 @@
 
         <title>
             {% block title %}
-            {% if settings %}
+            {% if city_settings %}
             
-            {{settings.title}}
+            {{city_settings.title}}
             
             {% else %}
             
@@ -31,8 +31,8 @@
         <style type="text/css">
         .bgcolor {
             background-color: {% block bgcolor %}
-            {% if settings %}
-            {{settings.background_color}}
+            {% if city_settings %}
+            {{city_settings.background_color}}
             {% else %}
              #e8ae6a
             {% endif %}
@@ -40,8 +40,8 @@
                  }
         .textcolor {
             color: {% block textcolor %}
-            {% if settings %}
-            {{settings.text_color}}
+            {% if city_settings %}
+            {{city_settings.text_color}}
             {% else %}
              #e8ae6a
             {% endif %}
@@ -60,8 +60,8 @@
                 <div id="city_logo">
                     <div id="city_name" class="textcolor">
                         {% block city_name %}
-                        {% if settings %}
-                        {{ settings.city_name}}
+                        {% if city_settings %}
+                        {{ city_settings.city_name}}
                         {% else %}
                          City 
                         {% endif %}

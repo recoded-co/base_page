@@ -5,7 +5,7 @@ from django.template import RequestContext
 from django.utils import translation
 from forms import FeedbackForm
 from models import Feedback
-from models import SiteSetting
+from models import CitySetting
 
 def set_language(request):
     
@@ -37,7 +37,7 @@ def feedback(request):
     This function handles the feedback form
     """
     if (request.method == 'GET'):
-        form = FeedbackForm();
+        form = FeedbackForm()
         next = request.GET.get('next', None)
         if next == None:
             next = request.META.get('HTTP_REFERER',
@@ -55,7 +55,7 @@ def feedback(request):
             
             cleaned_data = form.cleaned_data
             cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
-                                                 request.META.get('HTTP_USER_AGENT',
+                                                request.META.get('HTTP_USER_AGENT',
                                                                   'unknown'))
             if request.user.is_authenticated():
                 cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
@@ -73,11 +73,12 @@ def test(request, template_name):
     """
     This view is made only for testing the templates
     """
+    print "hello"
     try:
-        settings = SiteSetting.on_site.all()[0]
+        city_settings = CitySetting.on_site.all()[0]
     except IndexError:
-        settings = {}   
-    
+        city_settings = {}   
+   
     return render_to_response('%s.html' % template_name,
-                              {'settings':settings},
+                              {'city_settings':city_settings},
                               context_instance = RequestContext(request))
