@@ -5,10 +5,12 @@
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
     <head>
+        <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
         <meta charset="utf-8">
 
         <title>
             {% block title %}
+
             {% if city_settings %}
             
             {{city_settings.title}}
@@ -30,6 +32,7 @@
         {% endblock %}
         <style type="text/css">
         .bgcolor {
+
             background-color: {% block bgcolor %}
             {% if city_settings %}
             {{city_settings.background_color}}
@@ -47,9 +50,17 @@
             {% endif %}
             {% endblock %};
                    }
+
         </style>
 
-        <script src="{{ STATIC_URL }}javascript/modernizr-2.5.2.min.js"></script>
+        <!--<script src="{{ STATIC_URL }}javascript/modernizr-2.5.2.min.js"></script>-->
+        <!--[if lt IE 9]>
+            <script>
+            document.createElement('header');
+            document.createElement('footer');
+            </script>
+        <![endif]-->
+
     </head>
     <body class="bgcolor {% block body_class %}{% endblock %}">
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.chromium.org/developers/how-tos/chrome-frame-getting-started -->
@@ -65,15 +76,12 @@
                         {% else %}
                          City 
                         {% endif %}
+
                         {% endblock %}
                     </div>
                     <div id="blurb">
                         {% block blurb %}
-                        {% if settings %}
-                        {{ settings.blurb}}
-                        {% else %}
-                        Help us improve our City 
-                        {%endif%}
+                        Help us improve our city
                         {% endblock %}
                     </div>
                 </div>
@@ -112,16 +120,11 @@
             <div class="right">
                 <div id="provider">
                     <a href="{% block provider_url %}#{% endblock %}" target="_blank">
-                        {% block provider_name %}
-                        {% if settings %}
-                        {{ settings.provider}}
-                        {% else %}
-                        Geonition 
-                        {%endif%}{% endblock %} {% now "Y" %}
+                        {% block provider_name %}Geonition{% endblock %} {% now "Y" %}
                     </a>
                 </div>
                 <div id="logo">
-                    <img alt="pehmogis" src="{{ STATIC_URL }}images/pehmogis-logo.png" />
+                    <img alt="pehmogis" src="{{ STATIC_URL }}images/pehmogis-logo.png" height="22" width="82" />
                 </div>
             </div>
         </footer>
