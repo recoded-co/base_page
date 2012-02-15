@@ -83,7 +83,6 @@ def test(request, template_name):
     """
     This view is made only for testing the templates
     """
-    print "hello"
     try:
         city_settings = CitySetting.on_site.all()[0]
     except IndexError:
