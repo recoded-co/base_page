@@ -14,10 +14,12 @@
             <p>
             {% trans "You can write your feedback in the textbox below" %}
             </p>
-            {% csrf_token %}           
+            {% csrf_token %}
+            {{ form.content.errors }}
             {{ form.content }}
             <br />
             <input type="hidden" name="next" value="{{ next }}" />
+            <input type="hidden" name="site" value="{{ site }}" />
             <input type="submit" name="submit" value="{% trans "Send feedback" %}" />
         </form>
     </body>

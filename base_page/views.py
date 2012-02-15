@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.sites.models import Site
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -45,12 +46,14 @@ def feedback(request):
             
         return render_to_response('feedback.html',
                                 {'form': form,
+                                 'site': Site.objects.get_current().id,
                                  'next': next},
                                 context_instance=RequestContext(request))
             
     elif (request.method == 'POST'):
         form = FeedbackForm(request.POST)
-        
+        next = request.POST.get('next', '/')
+        print form
         if form.is_valid():
             
             cleaned_data = form.cleaned_data
@@ -61,12 +64,22 @@ def feedback(request):
                 cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
                                                      request.user.email)
             
-            feedback = Feedback(content = cleaned_data['content'])
+            feedback = Feedback(content = cleaned_data['content'],
+                                site = cleaned_data['site'])
             feedback.save()
             
-            next = request.POST.get('next', '/')
-            
             return HttpResponseRedirect(next)
+        
+        else:
+            #return with error messages
+            print "render the same page with errors"
+            print form.errors
+            return render_to_response('feedback.html',
+                                    {'form': form,
+                                     'site': Site.objects.get_current().id,
+                                     'next': next},
+                                    context_instance=RequestContext(request))
+            
             
 
 def test(request, template_name):
