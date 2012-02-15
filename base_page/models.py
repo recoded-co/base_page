@@ -21,18 +21,21 @@ class Feedback(models.Model):
     'some feedback'
     """
     site = models.ForeignKey(Site)
-    content = models.TextField()
+    content = models.TextField(blank=True)
     create_time = models.DateTimeField(auto_now_add=True)
     
 
     def save(self, *args, **kwargs):
-        send_mail('Feedback for the softGIS application',
-                self.content,
-                'do-not-reply@pehmogis.fi',
-                [admin[1] for admin in settings.ADMINS],
-                fail_silently=True)
+        if self.content != "":
+            send_mail('Feedback for the softGIS application',
+                    self.content,
+                    'do-not-reply@pehmogis.fi',
+                    [admin[1] for admin in settings.ADMINS],
+                    fail_silently=True)
             
-        super(Feedback, self).save(*args, **kwargs)
+            super(Feedback, self).save(*args, **kwargs)
+        else:
+            pass
 
     def __unicode__(self):
         return "feedback " + str(self.create_time)
