@@ -15,7 +15,7 @@ class Feedback(models.Model):
     >>> import settings
     >>> from softgis.models import Feedback
     >>> from django.core import mail
-    >>> fb = Feedback(content='some feedback')
+    >>> fb = Feedback(content='some feedback',site=1)
     >>> fb.save()
     >>> mail.outbox[0].body
     'some feedback'
@@ -52,4 +52,7 @@ class CitySetting(models.Model):
                              default='Help us improve our City')
     provider = models.CharField(max_length=10,
                                 default='Geonition')                         
-    on_site = CurrentSiteManager()                                                                                     
+    on_site = CurrentSiteManager()    
+    
+    def __unicode__(self):
+		return self.site                                                                                 
