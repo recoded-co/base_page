@@ -54,26 +54,24 @@
 
     </head>
     <body class="bgcolor {% block body_class %}{% endblock %}">
-    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.chromium.org/developers/how-tos/chrome-frame-getting-started -->
     <!--[if lt IE 7]><p class=chromeframe>{% trans "Your browser is" %} <em>{% trans "ancient" %}!</em> <a href="http://browsehappy.com/">{% trans "Upgrade to a different browser" %}</a> {% trans "or" %} <a href="http://www.google.com/chromeframe/?redirect=true">{% trans "install Google Chrome Frame" %}</a> {% trans "to experience this site" %}.</p><![endif]-->
 
         <header>
             <div class="left">
                 <div id="city_logo">
                     <div id="city_name" class="textcolor">
-                        {% block city_name %}
                         {% if city_settings %}
-                        {{ city_settings.city_name}}
+                            {{ city_settings.city_name}}
                         {% else %}
-                         City
+                            {% trans "City" %}
                         {% endif %}
-
-                        {% endblock %}
                     </div>
                     <div id="blurb">
-                        {% block blurb %}
-                        Help us improve our city
-                        {% endblock %}
+                        {% if city_settings %}
+                            {{ city_settings.blurb }}
+                        {% else %}
+                            {% trans "Help us improve our city" %}
+                        {% endif %}
                     </div>
                 </div>
             </div> <!-- left -->
