@@ -1,0 +1,16 @@
+[
+    {
+        "pk": 1,
+        "model": "base_page.citysetting",
+        "fields": {
+            "provider_url": "http://www.jarvenpaa.fi/",
+            "title": "J\u00e4rvenp\u00e4\u00e4 - pehmoGIS",
+            "site": 1,
+            "text_color": "#0051BA",
+            "provider": "J\u00e4rvenp\u00e4\u00e4n kaupunki",
+            "city_name": "J\u00e4rvenp\u00e4\u00e4",
+            "background_color": "#0051BA",
+            "blurb": "Vaikuta kaupunkisi kehitykseen"
+        }
+    }
+]
