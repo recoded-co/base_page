@@ -8,10 +8,10 @@ class Feedback(models.Model):
     """
     This model includes all the feedback
     given for the softGIS django application.
-    
+
     When a feedback is saved it sends an email
     to the administrators as set in settings.py.
-    
+
     >>> import settings
     >>> from softgis.models import Feedback
     >>> from django.core import mail
@@ -23,7 +23,7 @@ class Feedback(models.Model):
     site = models.ForeignKey(Site)
     content = models.TextField(blank=True)
     create_time = models.DateTimeField(auto_now_add=True)
-    
+
 
     def save(self, *args, **kwargs):
         if self.content != "":
@@ -32,14 +32,14 @@ class Feedback(models.Model):
                     'do-not-reply@pehmogis.fi',
                     [admin[1] for admin in settings.ADMINS],
                     fail_silently=True)
-            
+
             super(Feedback, self).save(*args, **kwargs)
         else:
             pass
 
     def __unicode__(self):
-        return "feedback " + str(self.create_time)
-        
+        return u"feedback " + str(self.create_time)
+
 
 class CitySetting(models.Model):
     site = models.ForeignKey(Site, unique = True)
@@ -48,11 +48,16 @@ class CitySetting(models.Model):
     background_color = models.CharField(max_length=7,
                                         default='#e8ae6a')
     text_color = models.CharField(max_length=7,
-                                  default='#e8ae6a')                                    
+                                  default='#e8ae6a')
     title = models.CharField(max_length=50,
                              default = 'test page')
     blurb = models.CharField(max_length=30,
                              default='Help us improve our City')
-    provider = models.CharField(max_length=10,
-                                default='Geonition')                         
-    on_site = CurrentSiteManager()                                                                                     
+    provider = models.CharField(max_length=30,
+                                default='Geonition')
+    provider_url = models.URLField()
+    on_site = CurrentSiteManager()
+
+
+    def __unicode__(self):
+        return u"%s" % (self.site.name,)

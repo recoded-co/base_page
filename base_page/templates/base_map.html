@@ -108,8 +108,13 @@
             </div>
             <div class="right">
                 <div id="provider">
-                    <a href="{% block provider_url %}#{% endblock %}" target="_blank">
-                        {% block provider_name %}Geonition{% endblock %} {% now "Y" %}
+                    <a href="{{ city_settings.provider_url }}" target="_blank">
+                        {% if city_settings %}
+                            {{ city_settings.provider }}
+                        {% else %}
+                            Geonition {% now "Y" %}
+                        {% endif %}
+
                     </a>
                 </div>
                 <div id="logo">
