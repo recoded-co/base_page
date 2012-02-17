@@ -5,23 +5,19 @@
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
     <head>
-        <!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
+        <!--[if lt IE 9]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
         <meta charset="utf-8">
 
         <title>
             {% if city_settings %}
-
             {{ city_settings.title }}
-
             {% else %}
-
             Test Page
-
             {%endif%}
         </title>
 
         <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css">
 
         <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.gif" type="image/x-icon" />
         {% block stylesheet %}
@@ -114,7 +110,6 @@
                         {% else %}
                             Geonition {% now "Y" %}
                         {% endif %}
-
                     </a>
                 </div>
                 <div id="logo">
