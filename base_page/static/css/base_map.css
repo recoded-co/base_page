@@ -1,0 +1,154 @@
+/*
+ ELEMENTS
+*/
+img {
+    width: 100%;
+}
+/*
+ THE MAIN STYLE
+*/
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font: normal 100% Cambria, Georgia, serif;
+}
+header {
+    height: 56px;
+    overflow: hidden;
+    width: 100%;
+}
+
+header .left {
+    float: left;
+    width: 370px;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-top-right-radius: 24.054054% 100%;
+}
+
+
+#city_logo {
+    position: relative;
+    font-family: sans-serif;
+    left: 30px;
+    width: 300px;
+    padding: 2px;
+}
+
+#city_name {
+    font-size: 1.875em;
+}
+
+#blurb {
+    font-size: 0.675em;
+    color: #C0C0C0;
+    font-weight: bold;
+}
+
+header .right {
+    position: absolute;
+    left: 370px;
+    right: 0px;
+    height: 100%;
+    padding: 5px;
+}
+
+#languages {
+    position: absolute;
+    right: 0px;
+    width: 100px;
+}
+
+#languages a {
+    display: block;
+    color: white;
+    font-size: 0.75em;
+}
+
+#main {
+    position: absolute;
+    bottom: 40px;
+    top: 56px;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 6.974921% 14.957983%;
+}
+
+#main .bleft {
+    float: left;
+    width: 370px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+#content {
+    background-color: white;
+}
+
+#main .bright {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 370px;
+}
+
+#map {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+/* ie 7 fix for openlayers */
+.lt-ie8 .olMapViewport {
+    position: absolute !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+}
+
+footer .left {
+    float: left;
+    width: 370px;
+    height: 100%;
+    padding: 10px;
+}
+
+#feedback {
+    background: url("../images/icons.png") no-repeat scroll -1px -79px transparent;
+    color: white;
+    padding-left: 23px;
+}
+
+footer .right {
+    position: absolute;
+    left: 370px;
+    right: 0%;
+    height: 100%;
+    padding: 10px;
+}
+
+#logo {
+    float: right;
+    max-width: 82px;
+    max-height: 22px;
+    padding-right: 10px;
+}
+
+#provider {
+    float: right;
+    margin-right: 20px;
+}
+
+
