@@ -1,10 +1,4 @@
 /*
- ELEMENTS
-*/
-img {
-    width: 100%;
-}
-/*
  THE MAIN STYLE
 */
 html {
@@ -16,21 +10,41 @@ body {
     width: 100%;
     font: normal 100% Cambria, Georgia, serif;
 }
+.span_left {
+    float: left;
+    width: 370px;
+    height: 100%;
+}
+.span_right {
+    position: absolute;
+    left: 370px;
+    right: 0px;
+    height: 100%;
+}
+
 header {
     height: 56px;
     overflow: hidden;
     width: 100%;
 }
 
-header .left {
-    float: left;
-    width: 370px;
-    height: 100%;
+header .span_left {
     background-color: white;
     overflow: hidden;
+}
+
+header .span_right {
+    height: 56px;
+}
+
+.base_map header .span_left {
     border-top-right-radius: 24.054054% 100%;
 }
 
+.base_page header .span_right {
+    background-color: white;
+    border-top-right-radius: 14.054054% 100%;
+}
 
 #city_logo {
     position: relative;
@@ -50,11 +64,7 @@ header .left {
     font-weight: bold;
 }
 
-header .right {
-    position: absolute;
-    left: 370px;
-    right: 0px;
-    height: 100%;
+header .span_right {
     padding: 5px;
 }
 
@@ -79,23 +89,12 @@ header .right {
     border-bottom-left-radius: 6.974921% 14.957983%;
 }
 
-#main .bleft {
-    float: left;
-    width: 370px;
-    height: 100%;
+#main .span_left {
     overflow-y: auto;
 }
 
 #content {
     background-color: white;
-}
-
-#main .bright {
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    right: 0px;
-    left: 370px;
 }
 
 #map {
@@ -118,10 +117,7 @@ footer {
     width: 100%;
 }
 
-footer .left {
-    float: left;
-    width: 370px;
-    height: 100%;
+footer .span_left {
     padding: 10px;
 }
 
@@ -131,11 +127,7 @@ footer .left {
     padding-left: 23px;
 }
 
-footer .right {
-    position: absolute;
-    left: 370px;
-    right: 0%;
-    height: 100%;
+footer .span_right {
     padding: 10px;
 }
 

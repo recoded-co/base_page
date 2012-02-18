@@ -4,7 +4,7 @@
 {% block css %}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css">
 <style type="text/css">
-.base_map {
+.base_page {
     background-color: {% if city_settings %}
                         {{ city_settings.background_color }};
                     {% else %}
@@ -22,7 +22,7 @@
 {% endblock %}
 
 {% block body_class %}
-base_map
+base_page
 {% endblock %}
 
 {% block header %}
@@ -58,17 +58,7 @@ base_map
 {% endblock header %}
 
 {% block main %}
-<div class="span_left">
-    <div id="content">
-        {% block content %}
-            some content can be added here
-        {% endblock %}
-    </div>
-</div>
-<div class="span_right">
-    <div id="map">
-    </div>
-</div>
+main content here
 {% endblock main %}
 
 {% block footer %}
