@@ -35,6 +35,23 @@ header .span_left {
 
 header .span_right {
     height: 56px;
+    color: white;
+}
+
+header .span_right a {
+    color: #ffffff;
+}
+
+header .span_right a:visited {
+    color: #ffffff;
+}
+
+header .auth_container {
+    float: left;
+}
+
+header .auth_container td {
+    padding: 1px;
 }
 
 .base_map header .span_left {
@@ -69,9 +86,8 @@ header .span_right {
 }
 
 #languages {
-    position: absolute;
-    right: 0px;
     width: 100px;
+    float: right;
 }
 
 #languages a {
@@ -87,6 +103,7 @@ header .span_right {
     width: 100%;
     background-color: white;
     border-bottom-left-radius: 6.974921% 14.957983%;
+    overflow: hidden;
 }
 
 #main .span_left {
@@ -119,6 +136,13 @@ footer {
 
 footer .span_left {
     padding: 10px;
+}
+
+footer a {
+    color: #ffffff;
+}
+footer a:visited {
+    color: #aaaaaa;
 }
 
 #feedback {
