@@ -87,7 +87,7 @@ base_map
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
                 <a href="{% url set_language %}?lang={{ lang.0 }}">
-                    {% trans "in" %} {{ lang.1 }}
+                    {{ lang.1 }}
                 </a>
             {% endifnotequal %}
         {% endfor %}

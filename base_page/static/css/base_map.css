@@ -38,11 +38,11 @@ header .span_right {
     color: white;
 }
 
-header .span_right a {
+.base_map header .span_right a {
     color: #ffffff;
 }
 
-header .span_right a:visited {
+.base_map header .span_right a:visited {
     color: #ffffff;
 }
 
@@ -61,6 +61,9 @@ header .auth_container td {
 .base_page header .span_right {
     background-color: white;
     border-top-right-radius: 14.054054% 100%;
+}
+.base_page header #languages {
+    margin-right: 100px;
 }
 
 #city_logo {
@@ -84,6 +87,10 @@ header .auth_container td {
 header .span_right {
     padding: 5px;
 }
+header .span_right .login {
+    display: inline-block;
+    width: 50%;
+}
 
 #languages {
     width: 100px;
@@ -92,7 +99,6 @@ header .span_right {
 
 #languages a {
     display: block;
-    color: white;
     font-size: 0.75em;
 }
 
