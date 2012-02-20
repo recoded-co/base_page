@@ -172,5 +172,9 @@ footer .span_right {
     float: right;
     margin-right: 20px;
 }
+.center {
+    width: 50%;
+    margin: 0 auto;
+}
 
 
