@@ -111,7 +111,7 @@ base_map
 
 {% block footer %}
 <div class="span_left">
-    <a id="feedback" href="{% url feedback %}" target="_blank">
+    <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
         {% trans "Give feedback for the service" %}
     </a>
 </div>
