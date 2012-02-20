@@ -56,9 +56,11 @@ def feedback(request):
         if form.is_valid():
 
             cleaned_data = form.cleaned_data
-            cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
-                                                request.META.get('HTTP_USER_AGENT',
-                                                                  'unknown'))
+            cleaned_data['content'] = "%s \n url: %s \n user agent: %s" % (cleaned_data['content'],
+                                                                           request.POST.get('next',
+                                                                                            'unknown'),
+                                                                           request.META.get('HTTP_USER_AGENT',
+                                                                                            'unknown'))
             if request.user.is_authenticated():
                 cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
                                                      request.user.email)
