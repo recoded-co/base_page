@@ -19,6 +19,8 @@
             {% endif %}
 }
 </style>
+    {% block stylesheet %}
+    {% endblock %}
 {% endblock %}
 
 {% block body_class %}
@@ -45,15 +47,13 @@ base_map
     </div>
 </div>
 <div class="span_right">
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and user.has_usable_password %}
     <table class="auth_container">
+        {{ user.has_usable_password }}
         <tr>
             <td>
-                {% trans "Hello"%}
                 {% if user.firstname %}
-                    {{ user.firstname }}!
-                {% else %}
-                    {{ user.username }}!
+                    {% trans "Hello"%} {{ user.firstname }}!
                 {% endif %}
             </td>
             <td>
