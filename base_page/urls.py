@@ -4,10 +4,10 @@ from django.conf.urls.defaults import url
 
 urlpatterns = patterns('base_page.views',
             #test templates
-            url(r'^setlang/',
+            url(r'setlang/',
                 'set_language',
                 name='set_language'),
-            url(r'^feedback/',
+            url(r'feedback/',
                 'feedback',
                 name='feedback'),
         )

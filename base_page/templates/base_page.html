@@ -4,7 +4,7 @@
 {% block css %}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css">
 <style type="text/css">
-.base_map {
+.base_page {
     background-color: {% if city_settings %}
                         {{ city_settings.background_color }};
                     {% else %}
@@ -19,12 +19,12 @@
             {% endif %}
 }
 </style>
-    {% block stylesheet %}
-    {% endblock %}
+{% block css_extra %}
+{% endblock %}
 {% endblock %}
 
 {% block body_class %}
-base_map
+base_page
 {% endblock %}
 
 {% block header %}
@@ -47,47 +47,11 @@ base_map
     </div>
 </div>
 <div class="span_right">
-    {% if user.is_authenticated and user.has_usable_password %}
-    <table class="auth_container">
-        {{ user.has_usable_password }}
-        <tr>
-            <td>
-                {% if user.firstname %}
-                    {% trans "Hello"%} {{ user.firstname }}!
-                {% endif %}
-            </td>
-            <td>
-                <a href="{% url profile %}?next={{ request.path }}">
-                    {% trans "profile" %}
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <a href="{% url logout %}?next={{ request.path }}">
-                    {% trans "sign out" %}
-                </a>
-            </td>
-        </tr>
-    </table>
-    {% else %}
-    <div class="login">
-        <a href="{% url login %}?next={{ request.path }}">
-            {% trans 'sign in' %}
-        </a>
-        {% trans "or" %}
-        <a href="{% url register %}?next={{ request.path }}">
-            {% trans 'register' %}
-        </a>
-        {% trans "as a user" %}
-    </div>
-    {% endif %}
     <div id="languages">
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
                 <a href="{% url set_language %}?lang={{ lang.0 }}">
-                    {{ lang.1 }}
+                    {% trans "in" %} {{ lang.1 }}
                 </a>
             {% endifnotequal %}
         {% endfor %}
@@ -96,22 +60,12 @@ base_map
 {% endblock header %}
 
 {% block main %}
-<div class="span_left">
-    <div id="content">
-        {% block content %}
-            some content can be added here
-        {% endblock %}
-    </div>
-</div>
-<div class="span_right">
-    <div id="map">
-    </div>
-</div>
+main content here
 {% endblock main %}
 
 {% block footer %}
 <div class="span_left">
-    <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
+    <a id="feedback" href="{% url feedback %}" target="_blank">
         {% trans "Give feedback for the service" %}
     </a>
 </div>

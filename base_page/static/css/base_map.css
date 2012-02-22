@@ -1,0 +1,180 @@
+/*
+ THE MAIN STYLE
+*/
+html {
+    overflow: hidden;
+}
+body {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font: normal 100% Cambria, Georgia, serif;
+}
+.span_left {
+    float: left;
+    width: 370px;
+    height: 100%;
+}
+.span_right {
+    position: absolute;
+    left: 370px;
+    right: 0px;
+    height: 100%;
+}
+
+header {
+    height: 56px;
+    overflow: hidden;
+    width: 100%;
+}
+
+header .span_left {
+    background-color: white;
+    overflow: hidden;
+}
+
+header .span_right {
+    height: 56px;
+    color: white;
+}
+
+.base_map header .span_right a {
+    color: #ffffff;
+}
+
+.base_map header .span_right a:visited {
+    color: #ffffff;
+}
+
+header .auth_container {
+    float: left;
+}
+
+header .auth_container td {
+    padding: 1px;
+}
+
+.base_map header .span_left {
+    border-top-right-radius: 24.054054% 100%;
+}
+
+.base_page header .span_right {
+    background-color: white;
+    border-top-right-radius: 14.054054% 100%;
+}
+.base_page header #languages {
+    margin-right: 100px;
+}
+
+#city_logo {
+    position: relative;
+    font-family: sans-serif;
+    left: 30px;
+    width: 300px;
+    padding: 2px;
+}
+
+#city_name {
+    font-size: 1.875em;
+}
+
+#blurb {
+    font-size: 0.675em;
+    color: #C0C0C0;
+    font-weight: bold;
+}
+
+header .span_right {
+    padding: 5px;
+}
+header .span_right .login {
+    display: inline-block;
+    width: 50%;
+}
+
+#languages {
+    width: 100px;
+    float: right;
+}
+
+#languages a {
+    display: block;
+    font-size: 0.75em;
+}
+
+#main {
+    position: absolute;
+    bottom: 40px;
+    top: 56px;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 6.974921% 14.957983%;
+    overflow: hidden;
+}
+
+#main .span_left {
+    overflow-y: auto;
+}
+
+#content {
+    background-color: white;
+}
+
+#map {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+/* ie 7 fix for openlayers */
+.lt-ie8 .olMapViewport {
+    position: absolute !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    height: 40px;
+    overflow: hidden;
+    width: 100%;
+}
+
+footer .span_left {
+    padding: 10px;
+}
+
+footer a {
+    color: #ffffff;
+}
+footer a:visited {
+    color: #aaaaaa;
+}
+
+#feedback {
+    background: url("../images/icons.png") no-repeat scroll -1px -79px transparent;
+    color: white;
+    padding-left: 23px;
+}
+
+footer .span_right {
+    padding: 10px;
+}
+
+#logo {
+    float: right;
+    max-width: 82px;
+    max-height: 22px;
+    padding-right: 10px;
+}
+
+#provider {
+    float: right;
+    margin-right: 20px;
+}
+.center {
+    width: 50%;
+    margin: 0 auto;
+}
+
+
