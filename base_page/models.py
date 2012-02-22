@@ -1,4 +1,5 @@
 from django.contrib.sites.models import Site
+from django.contrib.gis.db import models as geomodel
 from django.db import models
 from django.conf import settings
 from django.core.mail import send_mail
@@ -56,6 +57,7 @@ class CitySetting(models.Model):
     provider = models.CharField(max_length=30,
                                 default='Geonition')
     provider_url = models.URLField()
+    city_area = geomodel.PolygonField()
     on_site = CurrentSiteManager()
 
 
