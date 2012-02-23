@@ -1,42 +1,6 @@
 [
     {
         "pk": 1,
-        "model": "base_page.feedback",
-        "fields": {
-            "content": "dsafdsa Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.10 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
-            "create_time": "2012-02-20T12:17:35.238",
-            "site": 1
-        }
-    },
-    {
-        "pk": 2,
-        "model": "base_page.feedback",
-        "fields": {
-            "content": "hello \n url: /base_page/template/base_map \n user agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.10 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
-            "create_time": "2012-02-20T12:23:58.859",
-            "site": 1
-        }
-    },
-    {
-        "pk": 3,
-        "model": "base_page.feedback",
-        "fields": {
-            "content": "cfgdsa \n url: /base_page/template/base_map \n user agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.10 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
-            "create_time": "2012-02-20T12:24:03.504",
-            "site": 1
-        }
-    },
-    {
-        "pk": 4,
-        "model": "base_page.feedback",
-        "fields": {
-            "content": "gfdsgdfs \n url: /base_page/template/base_map \n user agent: Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.7 (KHTML, like Gecko) Ubuntu/11.10 Chromium/16.0.912.77 Chrome/16.0.912.77 Safari/535.7",
-            "create_time": "2012-02-20T12:32:07.132",
-            "site": 1
-        }
-    },
-    {
-        "pk": 1,
         "model": "base_page.citysetting",
         "fields": {
             "provider_url": "http://www.jarvenpaa.fi/",
