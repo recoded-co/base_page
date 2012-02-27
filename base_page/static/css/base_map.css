@@ -8,8 +8,15 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font: normal 100% Cambria, Georgia, serif;
+    font-family: sans-serif;
 }
+h1, h2, h3, h4, h5 {
+    font-family: sans-serif;
+}
+.ui-widget {
+    font-family: inherit;
+}
+
 .span_left {
     float: left;
     width: 370px;

@@ -2,6 +2,10 @@
 {% load i18n %}
 
 {% block css %}
+
+{% block stylesheet %}
+{% endblock %}
+
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css">
 <style type="text/css">
 .base_map {
@@ -19,8 +23,6 @@
             {% endif %}
 }
 </style>
-    {% block stylesheet %}
-    {% endblock %}
 {% endblock %}
 
 {% block body_class %}
@@ -36,6 +38,9 @@ base_map
         {% else %}
             {% trans "City" %}
         {% endif %}
+
+        <img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />
+
         </div>
         <div id="blurb">
             {% if city_settings %}
@@ -49,12 +54,9 @@ base_map
 <div class="span_right">
     {% if user.is_authenticated and user.has_usable_password %}
     <table class="auth_container">
-        {{ user.has_usable_password }}
         <tr>
             <td>
-                {% if user.firstname %}
-                    {% trans "Hello"%} {{ user.firstname }}!
-                {% endif %}
+                {% trans "Hello"%} {{ user }}!
             </td>
             <td>
                 <a href="{% url profile %}?next={{ request.path }}">
@@ -124,9 +126,6 @@ base_map
                 Geonition {% now "Y" %}
             {% endif %}
         </a>
-    </div>
-    <div id="logo">
-        <img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />
     </div>
 </div>
 {% endblock footer %}
