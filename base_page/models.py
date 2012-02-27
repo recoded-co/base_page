@@ -59,6 +59,7 @@ class CitySetting(models.Model):
     provider_url = models.URLField()
     city_area = geomodel.PolygonField()
     on_site = CurrentSiteManager()
+    analytics_script = models.TextField()
 
 
     def __unicode__(self):
