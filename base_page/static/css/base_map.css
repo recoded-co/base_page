@@ -8,11 +8,13 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
+    font-family: Verdana, Arial, sans-serif;
 }
-h1, h2, h3, h4, h5 {
-    font-family: sans-serif;
+
+p {
+    font-size: 0.9em;
 }
+
 .ui-widget {
     font-family: inherit;
 }
@@ -155,7 +157,7 @@ footer a {
     color: #ffffff;
 }
 footer a:visited {
-    color: #aaaaaa;
+    color: #ffffff;
 }
 
 #feedback {
@@ -178,6 +180,7 @@ footer .span_right {
 #provider {
     float: right;
     margin-right: 20px;
+    color: white;
 }
 .center {
     width: 50%;
