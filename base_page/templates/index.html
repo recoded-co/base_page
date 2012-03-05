@@ -45,7 +45,7 @@
 
   <script>
   {% block google_analytics %}
-      {{ city_settings.analytics_script }}
+      {{ city_settings.analytics_script|safe }}
   {% endblock %}
   </script>
 </body>
