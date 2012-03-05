@@ -75,13 +75,9 @@ base_map
     </table>
     {% else %}
     <div class="login">
-        <a href="{% url login %}?next={{ request.path }}">
-            {% trans 'sign in' %}
-        </a>
+        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
         {% trans "or" %}
-        <a href="{% url register %}?next={{ request.path }}">
-            {% trans 'register' %}
-        </a>
+        <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
         {% trans "as a user" %}
     </div>
     {% endif %}
