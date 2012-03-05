@@ -91,6 +91,8 @@ header .auth_container td {
     font-size: 0.675em;
     color: #C0C0C0;
     font-weight: bold;
+    position: relative;
+    bottom: 0.3em;
 }
 
 header .span_right {
