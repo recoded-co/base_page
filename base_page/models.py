@@ -52,7 +52,7 @@ class CitySetting(models.Model):
                                   default='#e8ae6a')
     title = models.CharField(max_length=50,
                              default = 'test page')
-    blurb = models.CharField(max_length=30,
+    blurb = models.CharField(max_length=50,
                              default='Help us improve our City')
     provider = models.CharField(max_length=30,
                                 default='Geonition')

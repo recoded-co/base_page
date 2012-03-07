@@ -8,11 +8,13 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-family: sans-serif;
+    font-family: Verdana, Arial, sans-serif;
 }
-h1, h2, h3, h4, h5 {
-    font-family: sans-serif;
+
+p {
+    font-size: 0.9em;
 }
+
 .ui-widget {
     font-family: inherit;
 }
@@ -89,6 +91,8 @@ header .auth_container td {
     font-size: 0.675em;
     color: #C0C0C0;
     font-weight: bold;
+    position: relative;
+    bottom: 0.3em;
 }
 
 header .span_right {
@@ -155,7 +159,7 @@ footer a {
     color: #ffffff;
 }
 footer a:visited {
-    color: #aaaaaa;
+    color: #ffffff;
 }
 
 #feedback {
@@ -178,10 +182,25 @@ footer .span_right {
 #provider {
     float: right;
     margin-right: 20px;
+    color: white;
 }
 .center {
     width: 50%;
     margin: 0 auto;
 }
 
+ul.breadcrumb {
+    list-style: none;
+    padding: 1em;
+    margin: 0em;
+}
+.breadcrumb li {
+    display: inline-block;
+    text-shadow: 0 0.0625em 0 white;
+    font-size: 0.9em;
+}
+.breadcrumb .divider {
+    font-size: 0.8em;
+    letter-spacing: -0.2em;
+}
 
