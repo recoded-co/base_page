@@ -34,13 +34,15 @@ base_map base_bgcolor
 <div class="span_left">
     <div id="city_logo">
         <div id="city_name" class="base_textcolor">
+
+        <img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />
+
         {% if city_settings %}
             {{ city_settings.city_name}}
         {% else %}
             {% trans "City" %}
         {% endif %}
 
-        <img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />
 
         </div>
         <div id="blurb">
