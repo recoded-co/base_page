@@ -16,7 +16,7 @@
                     {% endif %};
     color: white;
 }
-.textcolor {
+.base_textcolor {
     color: {% if city_settings %}
                 {{ city_settings.text_color }};
             {% else %}
@@ -33,7 +33,7 @@ base_map base_bgcolor
 {% block header %}
 <div class="span_left">
     <div id="city_logo">
-        <div id="city_name" class="textcolor">
+        <div id="city_name" class="base_textcolor">
         {% if city_settings %}
             {{ city_settings.city_name}}
         {% else %}
