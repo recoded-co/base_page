@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css">
 <style type="text/css">
-.base_map {
+.base_bgcolor {
     background-color: {% if city_settings %}
                         {{ city_settings.background_color }};
                     {% else %}
@@ -26,7 +26,7 @@
 {% endblock %}
 
 {% block body_class %}
-base_map
+base_map base_bgcolor
 {% endblock %}
 
 {% block header %}
