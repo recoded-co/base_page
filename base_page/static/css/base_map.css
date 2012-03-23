@@ -64,13 +64,9 @@ header .auth_container td {
 }
 
 .base_map header .span_left {
-    border-top-right-radius: 24.054054% 100%;
+    border-top-right-radius: 70px 70px;
 }
 
-.base_page header .span_right {
-    background-color: white;
-    border-top-right-radius: 14.054054% 100%;
-}
 .base_page header #languages {
     margin-right: 100px;
 }
@@ -78,7 +74,7 @@ header .auth_container td {
 #city_logo {
     position: relative;
     font-family: sans-serif;
-    left: 30px;
+    left: 40px;
     width: 300px;
     padding: 2px;
 }
@@ -120,7 +116,7 @@ header .span_right .login {
     top: 56px;
     width: 100%;
     background-color: white;
-    border-bottom-left-radius: 6.974921% 14.957983%;
+    border-bottom-left-radius: 70px 70px;
     overflow: hidden;
 }
 
@@ -130,7 +126,31 @@ header .span_right .login {
 
 #content {
     background-color: white;
-    color: black;
+    color: #646464;
+    margin-top: 36px;
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+#content p {    
+    padding-right: 10px;
+    padding-left: 42px;
+}
+#content h2 {
+    padding: 0px;
+    margin: 0px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 200;
+}
+#content h3 {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
 #map {
@@ -194,26 +214,32 @@ footer .span_right {
 ul.breadcrumb {
     padding: 0px;
     height: 36px;
+    margin-bottom: 1em;
 }
 .breadcrumb li {
     display: inline-block;
 }
 .breadcrumb li.disk {
-    background-image: url("../img/dashdisk_base.png");
+    background-image: url("../img/dashdisk_hover.png");
+    background-position: -6px;
     background-repeat: no-repeat;
-    width: 48px;
+    width: 36px;
     height: 36px;
     cursor: pointer;
 }
-.breadcrumb .disk.hover, .breadcrumb .disk:hover {
-    background-image: url("../img/dashdisk_hover.png");
+.breadcrumb .hover {
+    cursor: pointer;
 }
-.breadcrumb .active {
-    color: white;
-    vertical-align: top;
-    line-height: 36px;
-    font-size:1.4em;
-    font-weight: bold;
-    border-left: 2px solid white;
-    padding-left: 5px;
+.breadcrumb .hover:hover {
+    background-image: url("../img/dashdisk_base.png");
+}
+ul.breadcrumb .disk {
+    vertical-align: middle;
+}
+ul.breadcrumb li {
+    text-transform: uppercase;
+    font-size: 22px;
+    vertical-align: middle;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 200;
 }
