@@ -8,13 +8,11 @@ body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #646464;
 }
-
-p {
-    font-size: 0.9em;
-}
-
 .ui-widget {
     font-family: inherit;
 }
@@ -81,6 +79,7 @@ header .auth_container td {
 
 #city_name {
     font-size: 1.875em;
+    cursor: pointer;
 }
 
 #blurb {
@@ -126,21 +125,27 @@ header .span_right .login {
 
 #content {
     background-color: white;
-    color: #646464;
     margin-top: 36px;
-    font-family: 'Enriqueta', serif;
-    font-weight: 400;
-    font-size: 16px;
 }
 #content p {    
     padding-right: 10px;
     padding-left: 42px;
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #646464;
+}
+#content label {
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #646464;
 }
 #content h2 {
     padding: 0px;
     margin: 0px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 1.2em;
     font-family: 'Signika Negative', sans-serif;
     font-weight: 200;
 }
@@ -150,7 +155,14 @@ header .span_right .login {
     font-family: 'Enriqueta', serif;
     font-weight: 400;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1em;
+}
+#content h4 {
+    padding-left: 42px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-family: 'Signika Negative', sans-serif;
+    font-weight: 200;
 }
 
 #map {
@@ -221,11 +233,10 @@ ul.breadcrumb {
 }
 .breadcrumb li.disk {
     background-image: url("../img/dashdisk_hover.png");
-    background-position: -6px;
+    background-position: -7px;
     background-repeat: no-repeat;
     width: 36px;
     height: 36px;
-    cursor: pointer;
 }
 .breadcrumb .hover {
     cursor: pointer;
