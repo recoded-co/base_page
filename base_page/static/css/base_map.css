@@ -226,31 +226,46 @@ footer .span_right {
 ul.breadcrumb {
     padding: 0px;
     height: 36px;
-    margin-bottom: 1em;
-}
-.breadcrumb li {
-    display: inline-block;
-}
-.breadcrumb li.disk {
-    background-image: url("../img/dashdisk_hover.png");
-    background-position: -7px;
-    background-repeat: no-repeat;
-    width: 36px;
-    height: 36px;
-}
-.breadcrumb .hover {
-    cursor: pointer;
-}
-.breadcrumb .hover:hover {
-    background-image: url("../img/dashdisk_base.png");
-}
-ul.breadcrumb .disk {
-    vertical-align: middle;
+    margin: 0 0 1em 0;
 }
 ul.breadcrumb li {
+    display: inline-block;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 1.375em;
     vertical-align: middle;
     font-family: 'Signika Negative', sans-serif;
     font-weight: 200;
+}
+ul.breadcrumb li.disk {
+    background-image: url("../img/dashdisk_hover.png");
+    background-position: -8px;
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 36px;
+    vertical-align: middle;
+}
+ul.breadcrumb li.hover {
+    cursor: pointer;
+}
+ul.breadcrumb li.hover:hover {
+    background-image: url("../img/dashdisk_base.png");
+}
+ul.breadcrumb li.active {
+    color: white;
+    font-family: 'Enriqueta', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 16px;
+    vertical-align: middle;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    position: relative;
+    right: 6px;
+}
+ul.breadcrumb li.separator {
+    background-color: white;
+    height: 100%;
+    width: 3px;
+    position: relative;
+    right: 6px;
 }
