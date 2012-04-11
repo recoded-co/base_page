@@ -39,6 +39,30 @@ active_class: the class to use when a button is activated
                         .html( label )
                         .text();
                 
+                //add rule to layer for prefered rendering      
+                var color = $(this.element).data('color');
+                var name = $(this.element).attr('name');
+                if(!this.options.rule_added) {
+                    var rule = new OpenLayers.Rule({
+                        filter: new OpenLayers.Filter.Comparison({
+                            type: OpenLayers.Filter.Comparison.EQUAL_TO,
+                            property: 'name',
+                            value: name
+                        }),
+                        symbolizer: {
+                            externalGraphic: '/images/needle?color=' + color,
+                            graphicHeight: 36,
+                            graphicWidth: 23,
+                            graphicYOffset: -30,
+                            cursor: 'pointer'
+                            }
+                        });
+                    var drawcontrol_id = this.options['drawcontrol'];
+                    var drawcontrol = map.getControl(drawcontrol_id);
+                    drawcontrol.layer.styleMap.styles.default.addRules([rule]);
+                    this.options.rule_added = true;
+                }
+            
                 return this;
             },
 
@@ -76,24 +100,6 @@ active_class: the class to use when a button is activated
                     //change the temporary style of the layer
                     var color = $(this.element).data('color');
                     var name = $(this.element).attr('name');
-                    if(!this.options.rule_added) {
-                        var rule = new OpenLayers.Rule({
-                                    filter: new OpenLayers.Filter.Comparison({
-                                        type: OpenLayers.Filter.Comparison.EQUAL_TO,
-                                        property: 'name',
-                                        value: name
-                                    }),
-                                    symbolizer: {
-                                        externalGraphic: '/images/needle?color=' + color,
-                                        graphicHeight: 36,
-                                        graphicWidth: 23,
-                                        graphicYOffset: -30,
-                                        cursor: 'pointer'
-                                        }
-                                    });                        
-                        drawcontrol.layer.styleMap.styles.default.addRules([rule]);
-                        this.options.rule_added = true;
-                    }
                     drawcontrol.layer.styleMap.styles.temporary.defaultStyle.externalGraphic = '/images/needle?color=' + color;
                 }
             },
