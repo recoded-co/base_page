@@ -14,7 +14,8 @@ body {
     color: #646464;
 }
 .ui-widget {
-    font-family: inherit;
+    font-size: 1.0em !important;
+    font-family: 'Enriqueta', serif !important;
 }
 
 .span_left {
