@@ -10,4 +10,5 @@ def city(request):
     except IndexError:
         city_settings = {}
 
+
     return {'city_settings': city_settings}

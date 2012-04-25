@@ -126,7 +126,8 @@ header .span_right .login {
 
 #content {
     background-color: white;
-    margin-top: 36px;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 #content p {    
     padding-right: 10px;
