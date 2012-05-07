@@ -238,6 +238,11 @@ ul.breadcrumb li {
     font-family: 'Signika Negative', sans-serif;
     font-weight: 200;
 }
+.lt-ie8 ul.breadcrumb li h2 {
+    position: relative;
+    bottom: 73px;
+    left: 42px;
+}
 ul.breadcrumb li.disk {
     background-image: url("../img/dashdisk_hover.png");
     background-position: -8px;
