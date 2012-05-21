@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='base_page',
-    version='5.0.0',
+    version='4.1.0',
     author='Kristoffer Snabb',
     url='https://github.com/geonition/base_page',
     packages=find_packages(),
@@ -22,5 +22,6 @@ setup(
         ],
     },
     zip_safe=False,
-    install_requires=['django'],
+    install_requires=['django',
+                      'django-modeltranslation'],
 )
