@@ -43,7 +43,10 @@ class Feedback(models.Model):
 
 
 class CitySetting(models.Model):
-    site = models.ForeignKey(Site, unique = True)
+    site = models.ForeignKey(Site,
+                             unique = True,
+                             default = getattr(settings, 'SITE_ID', 1),
+                             editable = False)
     city_name = models.CharField(max_length=30,
                                  default='City')
     background_color = models.CharField(max_length=7,
