@@ -46,6 +46,9 @@
   {% block google_analytics %}
       {{ city_settings.analytics_script|safe }}
   {% endblock %}
+  
+  //OpenLayers image path
+  OpenLayers.ImgPath = "{{ STATIC_URL }}img/";
   </script>
 </body>
 </html>
