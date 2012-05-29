@@ -44,7 +44,7 @@
 
   <script>
   {% block google_analytics %}
-      {{ city_settings.analytics_script|safe }}
+      {% include "analytics.js" %}
   {% endblock %}
   
   //OpenLayers image path

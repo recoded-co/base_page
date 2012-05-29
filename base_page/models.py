@@ -62,7 +62,6 @@ class CitySetting(models.Model):
     provider_url = models.URLField()
     city_area = geomodel.PolygonField(srid = getattr(settings, 'SPATIAL_REFERENCE_SYSTEM_ID', 4326))
     on_site = CurrentSiteManager()
-    analytics_script = models.TextField(blank = True)
 
 
     def __unicode__(self):
