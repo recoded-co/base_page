@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -11,19 +11,17 @@ msgstr ""
 "PO-Revision-Date: 2012-05-22 11:39+0200\n"
 "Last-Translator: Kristoffer Snabb <kristoffer.snabb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/base_map.html:44
-#: templates/base_page.html:37
+#: templates/base_map.html:44 templates/base_page.html:37
 msgid "City"
 msgstr "Stad"
 
-#: templates/base_map.html:53
-#: templates/base_page.html:44
+#: templates/base_map.html:53 templates/base_page.html:44
 msgid "Help us improve our city"
 msgstr "Hjälp oss förbättra vår stad"
 
@@ -55,8 +53,7 @@ msgstr "registrera"
 msgid "as a user"
 msgstr "som en användare"
 
-#: templates/base_map.html:118
-#: templates/base_page.html:69
+#: templates/base_map.html:118 templates/base_page.html:69
 msgid "Give feedback for the service"
 msgstr "Ge respons för servicen"
 
@@ -83,4 +80,3 @@ msgstr "softGIS administratör"
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
 msgstr "softGIS administration"
-
