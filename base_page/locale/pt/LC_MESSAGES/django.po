@@ -2,82 +2,83 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-31 07:52-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2012-06-01 14:18\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Translated-Using: django-rosetta 0.6.6\n"
 
 #: templates/base_map.html:45 templates/base_page.html:37
 msgid "City"
-msgstr ""
+msgstr "Cidade"
 
 #: templates/base_map.html:54 templates/base_page.html:44
 msgid "Help us improve our city"
-msgstr ""
+msgstr "Ajuda-nos a melhorar a nossa cidade"
 
 #: templates/base_map.html:64
 msgid "Hello"
-msgstr ""
+msgstr "Olá"
 
 #: templates/base_map.html:68
 msgid "profile"
-msgstr ""
+msgstr "perfil"
 
 #: templates/base_map.html:76
 msgid "sign out"
-msgstr ""
+msgstr "sair"
 
 #: templates/base_map.html:83
 msgid "sign in"
-msgstr ""
+msgstr "entrar"
 
 #: templates/base_map.html:84
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #: templates/base_map.html:85
 msgid "register"
-msgstr ""
+msgstr "registar"
 
 #: templates/base_map.html:86
 msgid "as a user"
-msgstr ""
+msgstr "como utilizador"
 
 #: templates/base_map.html:119 templates/base_page.html:69
 msgid "Give feedback for the service"
-msgstr ""
+msgstr "Comenta o serviço"
 
 #: templates/base_page.html:54
 msgid "in"
-msgstr ""
+msgstr "em"
 
 #: templates/feedback.html:6
 msgid "Palautetta"
-msgstr ""
+msgstr "Comentários"
 
 #: templates/feedback.html:9
 msgid "You can write your feedback in the textbox below"
-msgstr ""
+msgstr "Podes escrever os teus comentários na caixa de texto abaixo"
 
 #: templates/feedback.html:17
 msgid "Send feedback"
-msgstr ""
+msgstr "Envia comentários"
 
 #: templates/admin/base_site.html:4
 msgid "softGIS site admin"
-msgstr ""
+msgstr "softGIS site admin"
 
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
-msgstr ""
+msgstr "softGIS administração"
