@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-05-22 03:35-0500\n"
-"PO-Revision-Date: 2012-05-22 11:39+0200\n"
+"PO-Revision-Date: 2012-06-01 10:35+0200\n"
 "Last-Translator: Kristoffer Snabb <kristoffer.snabb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -53,7 +53,7 @@ msgstr "registrera"
 
 #: templates/base_map.html:85
 msgid "as a user"
-msgstr "som en användare"
+msgstr "dig som en användare"
 
 #: templates/base_map.html:118
 #: templates/base_page.html:69
