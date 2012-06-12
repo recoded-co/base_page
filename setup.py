@@ -11,6 +11,7 @@ setup(
     package_data = {
         "base_page": [
             "templates/*.html",
+            "templates/analytics.js",
             "templates/admin/*.html",
             "static/css/*.css",
             "static/img/*.png",
