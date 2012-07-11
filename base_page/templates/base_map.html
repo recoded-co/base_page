@@ -1,11 +1,7 @@
 {% extends "index.html" %}
 {% load i18n %}
 
-{% block description %}
-{% blocktrans %}
-SoftGIS service for collaborative urban planning in the city of {{ city_name }}
-{% endblocktrans %}
-{% endblock %}
+{% block description %}{% blocktrans %}SoftGIS service for participative urban planning{% endblocktrans %}{% endblock %}
 
 {% block css %}
 
@@ -17,26 +13,16 @@ SoftGIS service for collaborative urban planning in the city of {{ city_name }}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css" />
 <style type="text/css">
 .base_bgcolor {
-    background-color: {% if city_settings %}
-                        {{ city_settings.background_color }};
-                    {% else %}
-                        #e8ae6a;
-                    {% endif %};
+    background-color: {% if city_settings %}{{ city_settings.background_color }};{% else %}#e8ae6a;{% endif %}
 }
 .base_textcolor {
-    color: {% if city_settings %}
-                {{ city_settings.text_color }};
-            {% else %}
-            #e8ae6a;
-            {% endif %}
+    color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
 </style>
 
 {% endblock %}
 
-{% block body_class %}
-base_map base_bgcolor
-{% endblock %}
+{% block body_class %}base_map base_bgcolor{% endblock %}
 
 {% block header %}
 <div class="span_left">

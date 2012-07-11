@@ -5,18 +5,12 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="{{ LANGUAGE_CODE }}"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   
-  <title>
-    {% if city_settings %}
-      {{ city_settings.title }}
-    {% else %}
-      Test Page
-    {% endif %}
-  </title>
+  <title>{{ city_settings.title }}</title>
   <meta name="description" content="{% block description %}{% endblock %}" />
-
   <meta name="viewport" content="width=device-width" />
+  
+  <link rel="icon" type="image/gif" href="{{ STATIC_URL }}img/favicon.gif">
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
 
   {% block css %}
@@ -25,7 +19,7 @@
   <script src="{{ STATIC_URL }}js/libs/modernizr-2.5.3.min.js"></script>
 </head>
 <body class="{% block body_class %}{% endblock %}">
-  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
   {% block header %}
   {% endblock %}
