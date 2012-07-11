@@ -1,6 +1,12 @@
 {% extends "index.html" %}
 {% load i18n %}
 
+{% block description %}
+{% blocktrans %}
+SoftGIS service for collaborative urban planning in the city of {{ city_name }}
+{% endblocktrans %}
+{% endblock %}
+
 {% block css %}
 
 {% block stylesheet %}
