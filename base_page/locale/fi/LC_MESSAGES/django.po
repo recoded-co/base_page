@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-27 10:01+0300\n"
-"PO-Revision-Date: 2012-02-27 10:54+0200\n"
-"Last-Translator: Kristoffer Snabb <kristoffer.snabb@geonition.org>\n"
+"POT-Creation-Date: 2012-07-13 04:29-0500\n"
+"PO-Revision-Date: 2012-07-13 12:33+0200\n"
+"Last-Translator: Kristoffer Snabb <kristoffer.snabb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -17,43 +17,50 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: templates/base_map.html:44 templates/base_page.html:37
+#: templates/base_map.html:4
+msgid "SoftGIS service for participative urban planning"
+msgstr "Vuorovaikuta kaupunkisuunnitteluun pehmoGIS palvelun avulla"
+
+#: templates/base_map.html:37
+#: templates/base_page.html:37
 msgid "City"
 msgstr "Kaupunki"
 
-#: templates/base_map.html:53 templates/base_page.html:44
+#: templates/base_map.html:46
+#: templates/base_page.html:44
 msgid "Help us improve our city"
 msgstr "Auta meitä kehittämään kaupunkia"
 
-#: templates/base_map.html:63
+#: templates/base_map.html:56
 msgid "Hello"
 msgstr "Hei"
 
-#: templates/base_map.html:67
+#: templates/base_map.html:60
 msgid "profile"
 msgstr "profiili"
 
-#: templates/base_map.html:75
+#: templates/base_map.html:68
 msgid "sign out"
 msgstr "kirjaudu ulos"
 
-#: templates/base_map.html:82
+#: templates/base_map.html:75
 msgid "sign in"
 msgstr "kirjaudu sisään"
 
-#: templates/base_map.html:83
+#: templates/base_map.html:76
 msgid "or"
 msgstr "tai"
 
-#: templates/base_map.html:84
+#: templates/base_map.html:77
 msgid "register"
 msgstr "rekisteröidy"
 
-#: templates/base_map.html:85
+#: templates/base_map.html:78
 msgid "as a user"
 msgstr "käyttäjäksi"
 
-#: templates/base_map.html:118 templates/base_page.html:69
+#: templates/base_map.html:111
+#: templates/base_page.html:69
 msgid "Give feedback for the service"
 msgstr "Anna palautetta palvelusta"
 
@@ -72,6 +79,14 @@ msgstr "Voit antaa palautetta allaolevaan tekstikenttään"
 #: templates/feedback.html:17
 msgid "Send feedback"
 msgstr "Lähetä palaute"
+
+#: templates/admin/base_site.html:4
+msgid "softGIS site admin"
+msgstr "pehmoGIS sivuston ylläpitäjä"
+
+#: templates/admin/base_site.html:7
+msgid "softGIS administration"
+msgstr "pehmoGIS ylläpitäjä"
 
 #~ msgid "Give some feedback for the service"
 #~ msgstr "Anna palautetta palvelusta"
