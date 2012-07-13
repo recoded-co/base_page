@@ -276,3 +276,17 @@ ul.breadcrumb li.separator {
     position: relative;
     right: 6px;
 }
+
+/*TOOLTIP used by e.g. questionnaires and plan proposal pages */
+.tooltip {
+    position: absolute;
+    z-index: 999;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-radius: 0.5em;
+    padding: 0.2em;
+    border: 1px solid red;
+    text-align: center;
+    max-width: 15em;
+}
