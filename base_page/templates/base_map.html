@@ -4,10 +4,7 @@
 {% block description %}{% blocktrans %}SoftGIS service for participative urban planning{% endblocktrans %}{% endblock %}
 
 {% block css %}
-
-{% block stylesheet %}
-{% endblock %}
-
+    
 <link href="https://fonts.googleapis.com/css?family=Glegoo|Signika+Negative:300,400|Bitter|Radley|Enriqueta|Ruda" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="{{ STATIC_URL }}css/openlayers.css" />
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css" />
@@ -19,6 +16,9 @@
     color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
 </style>
+
+{% block stylesheet %}
+{% endblock %}
 
 {% endblock %}
 
@@ -98,10 +98,10 @@
     </div>
 </div>
 <div class="span_right">
+    {% block map %}
     <div id="map">
-        {% block map %}
-        {% endblock %}
     </div>
+    {% endblock %}
 </div>
 {% endblock main %}
 
