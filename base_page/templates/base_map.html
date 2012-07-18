@@ -112,6 +112,15 @@
     </a>
 </div>
 <div class="span_right">
+    <!-- AddThis Button BEGIN -->
+<iframe allowtransparency="true" frameborder="0" scrolling="no"
+        src="https://platform.twitter.com/widgets/tweet_button.html?lang={{ LANGUAGE_CODE }}&url=https%3A%2F%2F{{ request.get_host }}{{ request.path }}&counturl=https%3A%2F%2F{{ request.get_host }}"
+        style="width:130px; height:20px;"></iframe>
+
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-50068d9831c7ea22"></script>
+<!-- AddThis Button END -->
     <div id="provider">
         <a href="{{ city_settings.provider_url }}" target="_blank">
             {% if city_settings %}
