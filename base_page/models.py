@@ -45,22 +45,26 @@ class Feedback(models.Model):
 class CitySetting(models.Model):
     site = models.ForeignKey(Site,
                              unique = True,
-                             default = getattr(settings, 'SITE_ID', 1),
+                             default = getattr(settings,
+                                               'SITE_ID',
+                                               1),
                              editable = False)
-    city_name = models.CharField(max_length=30,
-                                 default='City')
-    background_color = models.CharField(max_length=7,
-                                        default='#e8ae6a')
-    text_color = models.CharField(max_length=7,
-                                  default='#e8ae6a')
-    title = models.CharField(max_length=50,
+    city_name = models.CharField(max_length = 30,
+                                 default = 'City')
+    background_color = models.CharField(max_length = 7,
+                                        default = '#e8ae6a')
+    text_color = models.CharField(max_length = 7,
+                                  default = '#e8ae6a')
+    title = models.CharField(max_length = 50,
                              default = 'test page')
-    blurb = models.CharField(max_length=50,
-                             default='Help us improve our City')
-    provider = models.CharField(max_length=30,
-                                default='Geonition')
+    blurb = models.CharField(max_length = 50,
+                             default = 'Help us improve our City')
+    provider = models.CharField(max_length = 30,
+                                default = 'Geonition')
     provider_url = models.URLField()
-    city_area = geomodel.PolygonField(srid = getattr(settings, 'SPATIAL_REFERENCE_SYSTEM_ID', 4326))
+    city_area = geomodel.PolygonField(srid = getattr(settings,
+                                                     'SPATIAL_REFERENCE_SYSTEM_ID',
+                                                     4326))
     on_site = CurrentSiteManager()
 
 

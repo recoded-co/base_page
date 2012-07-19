@@ -1,3 +1,6 @@
+"""
+Django forms 
+"""
 from django.forms import ModelForm
 from models import Feedback
 
@@ -8,4 +11,7 @@ class FeedbackForm(ModelForm):
     """
     
     class Meta:
+        """
+        This is a modelform for the Feedback model
+        """
         model = Feedback

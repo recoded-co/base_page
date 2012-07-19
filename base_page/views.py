@@ -10,12 +10,12 @@ from models import CitySetting
 
 def set_language(request):
 
-    next = request.REQUEST.get('next', None)
-    if not next:
-        next = request.META.get('HTTP_REFERER', None)
-    if not next:
-        next = '/'
-    response = HttpResponseRedirect(next)
+    next_page = request.REQUEST.get('next', None)
+    if not next_page:
+        next_page = request.META.get('HTTP_REFERER', None)
+    if not next_page:
+        next_page = '/'
+    response = HttpResponseRedirect(next_page)
 
     if request.method == 'GET':
 
@@ -39,20 +39,20 @@ def feedback(request):
     """
     if (request.method == 'GET'):
         form = FeedbackForm()
-        next = request.GET.get('next', None)
-        if next == None:
-            next = request.META.get('HTTP_REFERER',
+        next_page = request.GET.get('next', None)
+        if next_page == None:
+            next_page = request.META.get('HTTP_REFERER',
                                     '/')
 
         return render_to_response('feedback.html',
                                 {'form': form,
                                  'site': Site.objects.get_current().id,
-                                 'next': next},
+                                 'next': next_page},
                                 context_instance=RequestContext(request))
 
     elif (request.method == 'POST'):
         form = FeedbackForm(request.POST)
-        next = request.POST.get('next', '/')
+        next_page = request.POST.get('next', '/')
         if form.is_valid():
 
             cleaned_data = form.cleaned_data
@@ -65,18 +65,18 @@ def feedback(request):
                 cleaned_data['content'] = "%s %s" % (cleaned_data['content'],
                                                      request.user.email)
 
-            feedback = Feedback(content = cleaned_data['content'],
+            new_feedback = Feedback(content = cleaned_data['content'],
                                 site = cleaned_data['site'])
-            feedback.save()
+            new_feedback.save()
 
-            return HttpResponseRedirect(next)
+            return HttpResponseRedirect(next_page)
 
         else:
             #return with error messages
             return render_to_response('feedback.html',
                                     {'form': form,
                                      'site': Site.objects.get_current().id,
-                                     'next': next},
+                                     'next': next_page},
                                     context_instance=RequestContext(request))
 
 

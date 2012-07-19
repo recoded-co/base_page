@@ -1,3 +1,6 @@
+"""
+Admin classes for base_page related models
+"""
 from django.contrib.gis import admin
 from models import Feedback
 from models import CitySetting
@@ -5,6 +8,10 @@ from django.conf import settings
 from modeltranslation.admin import TranslationAdmin
     
 class CitySettingAdmin(TranslationAdmin, admin.OSMGeoAdmin):
+    """
+    The CitySettingAdmin handles the city/organization specific settings
+    for the site.
+    """
     list_display = ('city_name',
                     'title',
                     'blurb',
