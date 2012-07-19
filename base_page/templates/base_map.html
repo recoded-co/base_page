@@ -112,15 +112,7 @@
     </a>
 </div>
 <div class="span_right">
-    <!-- AddThis Button BEGIN -->
-<iframe allowtransparency="true" frameborder="0" scrolling="no"
-        src="https://platform.twitter.com/widgets/tweet_button.html?lang={{ LANGUAGE_CODE }}&url=https%3A%2F%2F{{ request.get_host }}{{ request.path }}&counturl=https%3A%2F%2F{{ request.get_host }}"
-        style="width:130px; height:20px;"></iframe>
-
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-50068d9831c7ea22"></script>
-<!-- AddThis Button END -->
+    
     <div id="provider">
         <a href="{{ city_settings.provider_url }}" target="_blank">
             {% if city_settings %}
@@ -129,6 +121,23 @@
                 Geonition {% now "Y" %}
             {% endif %}
         </a>
+    </div>
+    <div class="social_networks">
+        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https%3A%2F%2F{{ request.get_host }}{{ request.path }}"></div>
+        <script type="text/javascript">
+          window.___gcfg = {lang: '{{ LANGUAGE_CODE }}'};
+          
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+        
+        <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ request.get_host }}{{ request.path }}&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" 
+        style="border:none; overflow:hidden; width:90px; height:21px; background-color: transparent" ></iframe>
+        <iframe src="https://platform.twitter.com/widgets/tweet_button.html?lang={{ LANGUAGE_CODE }}%26url=https%3A%2F%2F{{ request.get_host }}{{ request.path }}%26counturl=https%3A%2F%2F{{ request.get_host }}"
+        style="width:90px; height:20px; border: 0; overflow: hidden; background-color: transparent;"></iframe>
     </div>
 </div>
 {% endblock footer %}

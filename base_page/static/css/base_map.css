@@ -290,3 +290,7 @@ ul.breadcrumb li.separator {
     text-align: center;
     max-width: 15em;
 }
+
+.social_networks {
+    float: right;
+}
