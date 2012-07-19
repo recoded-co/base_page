@@ -1,3 +1,1 @@
-//add your analytics script into this template or another tempalate with the same name
-var analytics_from = 'base_page';
-var testing = true;
+//add your analytics script to a tempalate file and set ANALYTICS_TEMPLATE = <template name> in settings.py to load it here
