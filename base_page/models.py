@@ -7,16 +7,17 @@ from django.contrib.sites.managers import CurrentSiteManager
 
 class Feedback(models.Model):
     """
-    This model includes all the feedback
+    This model stores all the feedback
     given for the softGIS django application.
 
     When a feedback is saved it sends an email
     to the administrators as set in settings.py.
 
-    >>> import settings
-    >>> from softgis.models import Feedback
+    >>> from django.conf import settings
+    >>> from base_page.models import Feedback
+    >>> from django.contrib.sites.models import Site
     >>> from django.core import mail
-    >>> fb = Feedback(content='some feedback',site=1)
+    >>> fb = Feedback(content='some feedback',site=Site.objects.get_current())
     >>> fb.save()
     >>> mail.outbox[0].body
     'some feedback'
