@@ -133,11 +133,12 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
           })();
         </script>
-        
+        <!--[if !IE]> -->
         <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ request.get_host }}{{ request.path }}&amp;send=false&amp;layout=button_count&amp;width=90&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21" 
-        style="border:none; overflow:hidden; width:90px; height:21px; background-color: transparent" ></iframe>
-        <iframe src="https://platform.twitter.com/widgets/tweet_button.html?lang={{ LANGUAGE_CODE }}%26url=https%3A%2F%2F{{ request.get_host }}{{ request.path }}%26counturl=https%3A%2F%2F{{ request.get_host }}"
-        style="width:90px; height:20px; border: 0; overflow: hidden; background-color: transparent;"></iframe>
+        style="border:none; overflow:hidden; width:90px; height:21px; background-color: transparent"></iframe>
+        <iframe src="https://platform.twitter.com/widgets/tweet_button.html?lang={{ LANGUAGE_CODE }}%26url=https%3A%2F%2F{{ request.get_host }}{{ request.path }}%26counturl=https%3A%2F%2F{{ request.get_host }}%26size=small"
+        style="width:100px; height:20px; border: 0; overflow: hidden; background-color: transparent;"></iframe>
+        <!--<![endif] -->
     </div>
 </div>
 {% endblock footer %}
