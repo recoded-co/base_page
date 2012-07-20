@@ -123,7 +123,7 @@
         </a>
     </div>
     <div class="social_networks">
-        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="https%3A%2F%2F{{ request.get_host }}{{ request.path }}"></div>
+        <div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="http{% if request.is_secure %}s{% endif %}://{{ request.get_host }}{{ request.path }}"></div>
         <script type="text/javascript">
           window.___gcfg = {lang: '{{ LANGUAGE_CODE }}'};
           
