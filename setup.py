@@ -18,6 +18,7 @@ setup(
             "static/img/*.gif",
             "static/js/*.js",
             "static/js/libs/*.js",
+            "static/js/libs/i18n/*.js",
             "locale/*/LC_MESSAGES/*.mo",
             "locale/*/LC_MESSAGES/*.po",
         ],
