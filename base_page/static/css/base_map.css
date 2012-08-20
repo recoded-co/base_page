@@ -29,6 +29,22 @@ body {
     right: 0px;
     height: 100%;
 }
+@media (min-width: 1110px) and (max-width:1536px) {
+    .span_left {
+        width: 33.33%;
+    }
+    .span_right {
+        left: 33.33%;
+    }
+}
+@media (min-width: 1536px) {
+    .span_left {
+        width: 512px;
+    }
+    .span_right {
+        left: 512px;
+    }
+}
 
 header {
     height: 56px;
