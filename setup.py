@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 setup(
     name='base_page',
-    version='4.2.7',
+    version='4.2.8',
     author='Kristoffer Snabb, Pratik Hublikar',
     url='https://github.com/geonition/base_page',
     packages=find_packages(),
