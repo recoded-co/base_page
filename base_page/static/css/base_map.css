@@ -89,14 +89,20 @@ header .auth_container td {
 #city_logo {
     position: relative;
     font-family: sans-serif;
-    left: 40px;
+    left: 2.2em;
     width: 300px;
     padding: 2px;
 }
 
 #city_name {
+    position: relative;
+    right: 16px;
     font-size: 1.875em;
     cursor: pointer;
+}
+#city_name img {
+    position: relative;
+    bottom: 0.4em;
 }
 
 #blurb {
@@ -105,7 +111,7 @@ header .auth_container td {
     font-weight: bold;
     position: relative;
     bottom: 0.3em;
-    left: 91px;
+    left: 1.1em;
 }
 
 header .span_right {
@@ -204,7 +210,7 @@ footer {
 }
 
 footer .span_left {
-    padding: 10px;
+    padding: 0.6em;
 }
 
 footer a {

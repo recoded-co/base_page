@@ -16,6 +16,7 @@ setup(
             "static/css/*.css",
             "static/img/*.png",
             "static/img/*.gif",
+            "static/img/*.svg",
             "static/js/*.js",
             "static/js/libs/*.js",
             "static/js/libs/i18n/*.js",

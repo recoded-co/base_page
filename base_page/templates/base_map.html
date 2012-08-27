@@ -29,7 +29,8 @@
     <div id="city_logo">
         <div id="city_name" class="base_textcolor" onclick="window.location = '{% url dashboard %}'">
 
-        <img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />
+        <img alt="softgis" src="{{ STATIC_URL }}img/bubble.svg" height="17" width="16" />
+        <!--<img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />-->
 
         {% if city_settings %}
             {{ city_settings.city_name}}
