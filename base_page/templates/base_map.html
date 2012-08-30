@@ -107,12 +107,28 @@
 {% endblock main %}
 
 {% block footer %}
-<div class="span_left">
+<!-- for mobile devices -->
+<div class="hidden_for_large">
+    <ul class="nav">
+        <li class="active">
+            <a href="#">{% trans "Main" %}</a>
+        </li>
+        <li>
+            <a href="#">{% trans "Map" %}</a>
+        </li>
+        <li>
+            <a href="#">{% trans "Settings" %}</a>
+        </li>
+    </ul>
+</div>
+
+<!-- for bigger displays -->
+<div class="span_left hidden_for_small">
     <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
         {% trans "Give feedback for the service" %}
     </a>
 </div>
-<div class="span_right">
+<div class="span_right hidden_for_small">
     
     <div id="provider">
         <a href="{{ city_settings.provider_url }}" target="_blank">

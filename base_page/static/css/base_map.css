@@ -13,6 +13,7 @@ body {
     font-size: 1em;
     color: #646464;
 }
+
 .ui-widget {
     font-size: 1.0em !important;
     font-family: 'Enriqueta', serif !important;
@@ -28,6 +29,16 @@ body {
     left: 370px;
     right: 0px;
     height: 100%;
+}
+/*mobile browsers*/
+@media (max-width:740px) {
+    .span_left {
+        float: none;
+        width: 100%;
+    }
+    .span_right {
+        width: 100%;
+    }
 }
 @media (min-width: 1110px) and (max-width:1536px) {
     .span_left {
@@ -103,8 +114,8 @@ header .auth_container td {
 #city_name img {
     position: relative;
     bottom: 0.4em;
+    left: 0.2em;
 }
-
 #blurb {
     font-size: 0.675em;
     color: #C0C0C0;
@@ -113,6 +124,18 @@ header .auth_container td {
     bottom: 0.3em;
     left: 1.1em;
 }
+/* svg image used so fix for lt-ie9*/
+.lt-ie9 #city_name {
+    right: 0;
+}
+.lt-ie9 #city_name img {
+    display: none;
+    visibility: hidden;
+}
+.lt-ie9 #blurb {
+    left: 0;
+}
+
 
 header .span_right {
     padding: 5px;
@@ -140,6 +163,13 @@ header .span_right .login {
     background-color: white;
     border-bottom-left-radius: 70px 70px;
     overflow: hidden;
+}
+
+@media (max-width:740px) {
+    /* remove rounded border */
+    #main {
+        border-bottom-left-radius: 0 0;
+    }
 }
 
 #main .span_left {
@@ -208,11 +238,13 @@ footer {
     overflow: hidden;
     width: 100%;
 }
-
 footer .span_left {
     padding: 0.6em;
+    width: auto;
 }
-
+footer .span_right {
+    left: auto;
+}
 footer a {
     color: #ffffff;
 }
@@ -316,4 +348,33 @@ ul.breadcrumb li.separator {
 .social_networks {
     float: right;
     margin-right: 2em;
+}
+
+/* hide for small */
+@media (max-width:740px) {
+    .hidden_for_small {
+        display: none;
+    }
+}
+/* hide for large */
+@media (min-width:740px) {
+    .hidden_for_large {
+        display: none;
+    }
+}
+
+ul.nav {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ul li {
+    float: left;
+    padding: 10px 0 10px 0;
+    width: 33%;
+    text-align: center;
 }
