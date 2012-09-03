@@ -12,6 +12,9 @@
 .base_bgcolor {
     background-color: {% if city_settings %}{{ city_settings.background_color }};{% else %}#e8ae6a;{% endif %}
 }
+.base_textcolor_bg {
+    background-color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
+}
 .base_textcolor {
     color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
