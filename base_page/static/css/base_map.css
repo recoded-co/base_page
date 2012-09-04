@@ -365,6 +365,9 @@ ul.breadcrumb li.separator {
     .hidden_for_large {
         display: inherit;
     }
+    header .span_right {
+        display: none;
+    }
     footer ul.nav {
         position: absolute;
         bottom: 0;
