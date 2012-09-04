@@ -439,4 +439,15 @@ ul.breadcrumb li.separator {
     }
 }
 
+/*
+mobiles and below
+*/
+@media (max-width:480px) {
+    #content p {
+        padding-left: 10px;
+    }
+    #content h4 {
+        padding-left: 10px;
+    }
+}
 
