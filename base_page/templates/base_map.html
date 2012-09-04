@@ -12,6 +12,9 @@
 .base_bgcolor {
     background-color: {% if city_settings %}{{ city_settings.background_color }};{% else %}#e8ae6a;{% endif %}
 }
+.base_textcolor_bg {
+    background-color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
+}
 .base_textcolor {
     color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
@@ -104,20 +107,75 @@
     </div>
     {% endblock %}
 </div>
+<div id="settings">
+    {% block settings %}
+    
+    {% if user.is_authenticated and user.has_usable_password %}
+    <p>        
+    {% trans "Hello"%} {{ user }}!
+    <br />
+    <a href="{% url logout %}?next={{ request.path }}">
+        {% trans "sign out" %}
+    </a>
+    </p>
+    <p>{% trans "Change language of the service to" %}:
+    {% for lang in LANGUAGES %}
+        {% ifnotequal LANGUAGE_CODE lang.0 %}
+            <a href="{% url set_language %}?lang={{ lang.0 }}">
+                {{ lang.1 }}
+            </a>
+        {% endifnotequal %}
+    {% endfor %}
+    </p>
+    
+    <p>
+    {% trans "Change your profile settings from here:" %}
+    <a href="{% url profile %}?next={{ request.path }}">
+        {% trans "profile" %}
+    </a>
+    </p>
+    
+    {% else %}
+    <p>
+        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+        {% trans "or" %}
+        <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
+        {% trans "as a user" %}
+    </p>
+    {% endif %}
+    
+    <p>
+        <a href="{% url feedback %}?next={{ request.path }}">
+            {% trans "Give feedback for the service" %}
+        </a>
+    </p>
+    
+    <p>
+        {% trans "This serivce is provided by" %}
+        <a href="{{ city_settings.provider_url }}" target="_blank">
+            {% if city_settings %}
+                {{ city_settings.provider }}
+            {% else %}
+                Geonition {% now "Y" %}
+            {% endif %}
+        </a>
+    </p>
+    {% endblock settings %}
+</div>
 {% endblock main %}
 
 {% block footer %}
 <!-- for mobile devices -->
 <div class="hidden_for_large">
     <ul class="nav">
-        <li class="active">
-            <a href="#">{% trans "Main" %}</a>
+        <li class="main">
+            <a href="javascript:$('body').removeClass('main map settings');$('body').addClass('main')">{% trans "Main" %}</a>
         </li>
-        <li>
-            <a href="#">{% trans "Map" %}</a>
+        <li class="map">
+            <a href="javascript:$('body').removeClass('main map settings');$('body').addClass('map')">{% trans "Map" %}</a>
         </li>
-        <li>
-            <a href="#">{% trans "Settings" %}</a>
+        <li class="settings">
+            <a href="javascript:$('body').removeClass('main map settings');$('body').addClass('settings')">{% trans "Settings" %}</a>
         </li>
     </ul>
 </div>

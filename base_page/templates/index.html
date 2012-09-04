@@ -10,7 +10,7 @@
   <meta name="description" content="{% block description %}{% endblock %}" />
   <meta name="viewport" content="width=device-width" /> 
   
-  <link rel="icon" type="image/gif" href="{{ STATIC_URL }}img/favicon.gif">
+  <link rel="icon" type="image/gif" href="{{ STATIC_URL }}img/favicon.gif" />
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
 
   {% block css %}
@@ -18,7 +18,7 @@
 
   <script src="{{ STATIC_URL }}js/libs/modernizr.custom.43051.js"></script>
 </head>
-<body class="{% block body_class %}{% endblock %}">
+<body class="{% block body_class %}{% endblock %} main">
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header>
   {% block header %}
