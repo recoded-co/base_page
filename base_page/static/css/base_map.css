@@ -285,6 +285,7 @@ ul.breadcrumb {
     padding: 0px;
     height: 36px;
     white-space: nowrap;
+    background-color: white;
 }
 ul.breadcrumb li {
     display: inline-block;
@@ -315,8 +316,6 @@ ul.breadcrumb li.hover:hover {
     background-image: url("../img/dashdisk_base.png");
 }
 ul.breadcrumb li.active {
-    position: relative;
-    right: 6px;
     position: relative;
     right: 15px;
 }
@@ -391,6 +390,15 @@ ul.breadcrumb li.separator {
         background-image: -webkit-linear-gradient(bottom, rgba(100,100,100,0.1) 29%, rgba(120,120,120,0.3) 65%);
         background-image: -ms-linear-gradient(bottom, rgba(100,100,100,0.1) 29%, rgba(120,120,120,0.3) 65%);
     
+    }
+    footer ul li.map {
+        position: absolute;
+        margin: 0 auto;
+        left: 33%;
+        right: 33%;
+    }
+    footer ul li.settings {
+        float: right;
     }
     /* choose the section with css class */
     .main footer ul li.main {
