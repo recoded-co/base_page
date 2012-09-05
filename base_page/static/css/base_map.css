@@ -313,8 +313,8 @@ ul.breadcrumb li.separator {
 .tooltip {
     position: absolute;
     z-index: 999;
-    top: 0px;
-    left: 0px;
+    top: 57px;
+    left: 57px;
     background-color: white;
     border-radius: 0.5em;
     padding: 0.2em;
