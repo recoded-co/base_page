@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-09-05 06:23-0500\n"
-"PO-Revision-Date: 2012-07-13 12:34+0200\n"
+"PO-Revision-Date: 2012-09-05 14:31+0200\n"
 "Last-Translator: Kristoffer Snabb <kristoffer.snabb@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -21,70 +21,80 @@ msgstr ""
 msgid "SoftGIS service for participative urban planning"
 msgstr "Delta i stadsplaneringen med hjälp av softGIS"
 
-#: templates/base_map.html:41 templates/base_page.html:37
+#: templates/base_map.html:41
+#: templates/base_page.html:37
 msgid "City"
 msgstr "Stad"
 
-#: templates/base_map.html:50 templates/base_page.html:44
+#: templates/base_map.html:50
+#: templates/base_page.html:44
 msgid "Help us improve our city"
 msgstr "Hjälp oss förbättra vår stad"
 
-#: templates/base_map.html:60 templates/base_map.html.py:115
+#: templates/base_map.html:60
+#: templates/base_map.html.py:115
 msgid "Hello"
 msgstr "Hei"
 
-#: templates/base_map.html:64 templates/base_map.html.py:134
+#: templates/base_map.html:64
+#: templates/base_map.html.py:134
 msgid "profile"
 msgstr "profil"
 
-#: templates/base_map.html:72 templates/base_map.html.py:118
+#: templates/base_map.html:72
+#: templates/base_map.html.py:118
 msgid "sign out"
 msgstr "logga ut"
 
-#: templates/base_map.html:79 templates/base_map.html.py:140
+#: templates/base_map.html:79
+#: templates/base_map.html.py:140
 msgid "sign in"
 msgstr "logga in"
 
-#: templates/base_map.html:80 templates/base_map.html.py:141
+#: templates/base_map.html:80
+#: templates/base_map.html.py:141
 msgid "or"
 msgstr "eller"
 
-#: templates/base_map.html:81 templates/base_map.html.py:142
+#: templates/base_map.html:81
+#: templates/base_map.html.py:142
 msgid "register"
 msgstr "registrera"
 
-#: templates/base_map.html:82 templates/base_map.html.py:143
+#: templates/base_map.html:82
+#: templates/base_map.html.py:143
 msgid "as a user"
 msgstr "dig som en användare"
 
 #: templates/base_map.html:121
 msgid "Change language of the service to"
-msgstr ""
+msgstr "Byt språk för servicen till"
 
 #: templates/base_map.html:132
 msgid "Change your profile settings from here:"
-msgstr ""
+msgstr "Ändra din profil härifrån:"
 
-#: templates/base_map.html:149 templates/base_map.html.py:186
+#: templates/base_map.html:149
+#: templates/base_map.html.py:186
 #: templates/base_page.html:69
 msgid "Give feedback for the service"
 msgstr "Ge respons för servicen"
 
 #: templates/base_map.html:154
 msgid "This serivce is provided by"
-msgstr ""
+msgstr "Den här servicen uppehålls av"
 
 #: templates/base_map.html:172
 msgid "Main"
-msgstr ""
+msgstr "Hem"
 
 #: templates/base_map.html:175
 msgid "Map"
-msgstr ""
+msgstr "Karta"
 
 #: templates/base_map.html:178
 msgid "Settings"
-msgstr ""
+msgstr "Inställningar"
 
 #: templates/base_page.html:54
 msgid "in"
@@ -109,3 +119,4 @@ msgstr "softGIS administratör"
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
 msgstr "softGIS administration"
+
