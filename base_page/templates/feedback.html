@@ -3,21 +3,20 @@
 
 {% block body_class %}base_map base_bgcolor settings{% endblock %}
 
-{% block settings %}
-<div class="center">
-    <form name="feedback" action="{% url feedback %}" method="post">
-        <h1>{% trans "Palautetta" %}</h1>
+{% block content %}
+<form name="feedback" action="{% url feedback %}" method="post">
+    <h1>{% trans "Palautetta" %}</h1>
 
-        <p>
-        {% trans "You can write your feedback in the textbox below" %}
-        </p>
-        {% csrf_token %}
-        {{ form.content.errors }}
-        {{ form.content }}
-        <br />
-        <input type="hidden" name="next" value="{{ next }}" />
-        <input type="hidden" name="site" value="{{ site }}" />
-        <input type="submit" name="submit" value="{% trans 'Send feedback' %}" />
-    </form>
-</div>
+    <p>
+    {% trans "You can write your feedback in the textbox below" %}
+    </p>
+    <div class="form_element">
+    {% csrf_token %}
+    {{ form.content.errors }}
+    {{ form.content }}
+    </div>
+    <input type="hidden" name="next" value="{{ next }}" />
+    <input type="hidden" name="site" value="{{ site }}" />
+    <input type="submit" name="submit" value="{% trans 'Send feedback' %}" />
+</form>
 {% endblock %}
