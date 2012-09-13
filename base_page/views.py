@@ -4,9 +4,9 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.utils import translation
-from forms import FeedbackForm
-from models import Feedback
-from models import CitySetting
+from base_page.forms import FeedbackForm
+from base_page.models import Feedback
+from base_page.models import CitySetting
 
 def set_language(request):
 

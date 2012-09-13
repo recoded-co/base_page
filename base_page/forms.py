@@ -2,7 +2,7 @@
 Django forms 
 """
 from django.forms import ModelForm
-from models import Feedback
+from base_page.models import Feedback
 
 class FeedbackForm(ModelForm):
     """

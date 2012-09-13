@@ -2,8 +2,8 @@
 Admin classes for base_page related models
 """
 from django.contrib.gis import admin
-from models import Feedback
-from models import CitySetting
+from base_page.models import Feedback
+from base_page.models import CitySetting
 from django.conf import settings
 from modeltranslation.admin import TranslationAdmin
     

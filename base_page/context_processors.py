@@ -2,7 +2,7 @@
 This file includes context processors
 that is needed to render the base pages
 """
-from models import CitySetting
+from base_page.models import CitySetting
 from django.conf import settings
 
 def city(request):
