@@ -1,68 +1,59 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-05 06:23-0500\n"
-"PO-Revision-Date: 2012-09-05 14:33+0200\n"
-"Last-Translator: Kristoffer Snabb <kristoffer.snabb@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"POT-Creation-Date: 2012-09-11 06:56-0500\n"
+"PO-Revision-Date: 2012-09-11 12:01+0000\n"
+"Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/geonition/language/fi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language: fi\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base_map.html:4
 msgid "SoftGIS service for participative urban planning"
 msgstr "Vuorovaikuta kaupunkisuunnitteluun pehmoGIS palvelun avulla"
 
-#: templates/base_map.html:41
-#: templates/base_page.html:37
+#: templates/base_map.html:41 templates/base_page.html:37
 msgid "City"
 msgstr "Kaupunki"
 
-#: templates/base_map.html:50
-#: templates/base_page.html:44
+#: templates/base_map.html:50 templates/base_page.html:44
 msgid "Help us improve our city"
 msgstr "Auta meitä kehittämään kaupunkia"
 
-#: templates/base_map.html:60
-#: templates/base_map.html.py:115
+#: templates/base_map.html:60 templates/base_map.html.py:115
 msgid "Hello"
 msgstr "Hei"
 
-#: templates/base_map.html:64
-#: templates/base_map.html.py:134
+#: templates/base_map.html:64 templates/base_map.html.py:134
 msgid "profile"
 msgstr "profiili"
 
-#: templates/base_map.html:72
-#: templates/base_map.html.py:118
+#: templates/base_map.html:72 templates/base_map.html.py:118
 msgid "sign out"
 msgstr "kirjaudu ulos"
 
-#: templates/base_map.html:79
-#: templates/base_map.html.py:140
+#: templates/base_map.html:79 templates/base_map.html.py:140
 msgid "sign in"
 msgstr "kirjaudu sisään"
 
-#: templates/base_map.html:80
-#: templates/base_map.html.py:141
+#: templates/base_map.html:80 templates/base_map.html.py:141
 msgid "or"
 msgstr "tai"
 
-#: templates/base_map.html:81
-#: templates/base_map.html.py:142
+#: templates/base_map.html:81 templates/base_map.html.py:142
 msgid "register"
 msgstr "rekisteröidy"
 
-#: templates/base_map.html:82
-#: templates/base_map.html.py:143
+#: templates/base_map.html:82 templates/base_map.html.py:143
 msgid "as a user"
 msgstr "käyttäjäksi"
 
@@ -74,8 +65,7 @@ msgstr "Muuta palvelun kieltä"
 msgid "Change your profile settings from here:"
 msgstr "Muutta profiiliasi täältä:"
 
-#: templates/base_map.html:149
-#: templates/base_map.html.py:186
+#: templates/base_map.html:149 templates/base_map.html.py:186
 #: templates/base_page.html:69
 msgid "Give feedback for the service"
 msgstr "Anna palautetta palvelusta"
@@ -119,24 +109,3 @@ msgstr "pehmoGIS sivuston ylläpitäjä"
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
 msgstr "pehmoGIS ylläpitäjä"
-
-#~ msgid "Give some feedback for the service"
-#~ msgstr "Anna palautetta palvelusta"
-
-#~ msgid "Your browser is"
-#~ msgstr "Selaimesi"
-
-#~ msgid "ancient"
-#~ msgstr "vanha"
-
-#~ msgid "Upgrade to a different browser"
-#~ msgstr "Päivitä selaimesi"
-
-#~ msgid "install Google Chrome Frame"
-#~ msgstr "asenna Google Chrome"
-
-#~ msgid "to experience this site"
-#~ msgstr "kokeaksesi tätä palvelua"
-
-#~ msgid "Give feedback"
-#~ msgstr "Anna palautetta"
