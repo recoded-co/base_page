@@ -3,16 +3,16 @@ Admin classes for base_page related models
 """
 from django.contrib.gis import admin
 from base_page.models import Feedback
-from base_page.models import CitySetting
+from base_page.models import OrganizationSetting
 from django.conf import settings
 from modeltranslation.admin import TranslationAdmin
     
-class CitySettingAdmin(TranslationAdmin, admin.OSMGeoAdmin):
+class OrganizationSettingAdmin(TranslationAdmin, admin.OSMGeoAdmin):
     """
-    The CitySettingAdmin handles the city/organization specific settings
+    The OrganizationSettingAdmin handles the organization specific settings
     for the site.
     """
-    list_display = ('city_name',
+    list_display = ('organization_name',
                     'title',
                     'blurb',
                     'provider',)
@@ -28,4 +28,4 @@ class CitySettingAdmin(TranslationAdmin, admin.OSMGeoAdmin):
                           {'default_zoom': 4})['default_zoom']
    
 admin.site.register(Feedback)
-admin.site.register(CitySetting, CitySettingAdmin)
+admin.site.register(OrganizationSetting, OrganizationSettingAdmin)

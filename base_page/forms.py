@@ -3,6 +3,7 @@ Django forms
 """
 from django.forms import ModelForm
 from base_page.models import Feedback
+from geonition_utils.widgets import ColorInput
 
 class FeedbackForm(ModelForm):
     """
@@ -15,3 +16,13 @@ class FeedbackForm(ModelForm):
         This is a modelform for the Feedback model
         """
         model = Feedback
+        
+
+#admin forms
+class OrganizationSetting(ModelForm):
+    
+    class Meta:
+        widgets = {
+            'background_color': ColorInput(),
+            'text_color': ColorInput()
+        }

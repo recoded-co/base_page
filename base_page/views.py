@@ -6,7 +6,7 @@ from django.template import RequestContext
 from django.utils import translation
 from base_page.forms import FeedbackForm
 from base_page.models import Feedback
-from base_page.models import CitySetting
+from base_page.models import OrganizationSetting
 
 def set_language(request):
 
@@ -78,18 +78,3 @@ def feedback(request):
                                      'site': Site.objects.get_current().id,
                                      'next': next_page},
                                     context_instance=RequestContext(request))
-
-
-
-def test(request, template_name):
-    """
-    This view is made only for testing the templates
-    """
-    try:
-        city_settings = CitySetting.on_site.all()[0]
-    except IndexError:
-        city_settings = {}
-
-    return render_to_response('%s.html' % template_name,
-                              {'city_settings':city_settings},
-                              context_instance = RequestContext(request))

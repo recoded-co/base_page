@@ -1,1 +1,0 @@
-[{"pk": 1, "model": "sites.site", "fields": {"domain": "jarvenpaa.pehmogis.fi", "name": "J\u00e4rvenp\u00e4\u00e4 - pehmoGIS"}}, {"pk": 2, "model": "sites.site", "fields": {"domain": "vaasa.pehmogis.fi", "name": "Vaasa - pehmoGIS"}}]

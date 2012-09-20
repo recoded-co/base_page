@@ -43,15 +43,15 @@ class Feedback(models.Model):
         return u"feedback " + str(self.create_time)
 
 
-class CitySetting(models.Model):
+class OrganizationSetting(models.Model):
     site = models.ForeignKey(Site,
                              unique = True,
                              default = getattr(settings,
                                                'SITE_ID',
                                                1),
                              editable = False)
-    city_name = models.CharField(max_length = 30,
-                                 default = 'City')
+    organization_name = models.CharField(max_length = 30,
+                                 default = 'Organization')
     background_color = models.CharField(max_length = 7,
                                         default = '#e8ae6a')
     text_color = models.CharField(max_length = 7,
@@ -63,9 +63,9 @@ class CitySetting(models.Model):
     provider = models.CharField(max_length = 30,
                                 default = 'Geonition')
     provider_url = models.URLField()
-    city_area = geomodel.PolygonField(srid = getattr(settings,
-                                                     'SPATIAL_REFERENCE_SYSTEM_ID',
-                                                     4326))
+    service_area = geomodel.PolygonField(srid = getattr(settings,
+                                                        'SPATIAL_REFERENCE_SYSTEM_ID',
+                                                        4326))
     on_site = CurrentSiteManager()
 
 

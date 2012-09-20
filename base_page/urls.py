@@ -11,9 +11,3 @@ urlpatterns = patterns('base_page.views',
                 'feedback',
                 name='feedback'),
         )
-
-
-if getattr(settings, 'DEBUG', False):
-    urlpatterns += patterns('base_page.views',
-            (r'^template/(\w+)', 'test'),
-        )
