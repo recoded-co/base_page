@@ -2,6 +2,7 @@
 Admin classes for base_page related models
 """
 from django.contrib.gis import admin
+from base_page.forms import OrganizationSettingForm
 from base_page.models import Feedback
 from base_page.models import OrganizationSetting
 from django.conf import settings
@@ -26,6 +27,8 @@ class OrganizationSettingAdmin(TranslationAdmin, admin.OSMGeoAdmin):
     default_zoom = getattr(settings,
                           'ORGANIZATION_ADMIN_DEFAULT_MAP_SETTINGS',
                           {'default_zoom': 4})['default_zoom']
+    
+    form = OrganizationSettingForm
    
 admin.site.register(Feedback)
 admin.site.register(OrganizationSetting, OrganizationSettingAdmin)

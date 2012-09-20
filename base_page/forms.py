@@ -19,7 +19,7 @@ class FeedbackForm(ModelForm):
         
 
 #admin forms
-class OrganizationSetting(ModelForm):
+class OrganizationSettingForm(ModelForm):
     
     class Meta:
         widgets = {
