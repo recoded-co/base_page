@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base_map.css" />
 <style type="text/css">
 .base_bgcolor {
-    background-color: {% if city_settings %}{{ city_settings.background_color }};{% else %}#e8ae6a;{% endif %}
+    background-color: {% if org_settings %}{{ org_settings.background_color }};{% else %}#e8ae6a;{% endif %}
 }
 .base_textcolor_bg {
-    background-color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
+    background-color: {% if org_settings %}{{ org_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
 .base_textcolor {
-    color: {% if city_settings %}{{ city_settings.text_color }};{% else %}#e8ae6a;{% endif %}
+    color: {% if org_settings %}{{ org_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
 </style>
 
@@ -35,8 +35,8 @@
         <img alt="softgis" src="{{ STATIC_URL }}img/bubble.svg" height="17" width="16" />
         <!--<img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />-->
 
-        {% if city_settings %}
-            {{ city_settings.city_name}}
+        {% if org_settings %}
+            {{ org_settings.organization_name}}
         {% else %}
             {% trans "City" %}
         {% endif %}
@@ -44,8 +44,8 @@
 
         </div>
         <div id="blurb">
-            {% if city_settings %}
-                {{ city_settings.blurb }}
+            {% if org_settings %}
+                {{ org_settings.blurb }}
             {% else %}
                 {% trans "Help us improve our city" %}
             {% endif %}
@@ -152,9 +152,9 @@
     
     <p>
         {% trans "This serivce is provided by" %}
-        <a href="{{ city_settings.provider_url }}" target="_blank">
-            {% if city_settings %}
-                {{ city_settings.provider }}
+        <a href="{{ org_settings.provider_url }}" target="_blank">
+            {% if org_settings %}
+                {{ org_settings.provider }}
             {% else %}
                 Geonition {% now "Y" %}
             {% endif %}
@@ -189,9 +189,9 @@
 <div class="span_right hidden_for_small">
     
     <div id="provider">
-        <a href="{{ city_settings.provider_url }}" target="_blank">
-            {% if city_settings %}
-                {{ city_settings.provider }}
+        <a href="{{ org_settings.provider_url }}" target="_blank">
+            {% if org_settings %}
+                {{ org_settings.provider }}
             {% else %}
                 Geonition {% now "Y" %}
             {% endif %}
