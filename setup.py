@@ -20,6 +20,8 @@ setup(
             "static/js/*.js",
             "static/js/libs/*.js",
             "static/js/libs/i18n/*.js",
+            "static/css/ui-lightness/*.css",
+            "static/css/ui-lightness/images/*.png",
             "locale/*/LC_MESSAGES/*.mo",
             "locale/*/LC_MESSAGES/*.po",
         ],

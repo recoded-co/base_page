@@ -12,11 +12,12 @@
   
   <link rel="icon" type="image/gif" href="{{ STATIC_URL }}img/favicon.gif" />
   <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css" />
+  <link href="{{ STATIC_URL }}css/ui-lightness/jquery-ui-1.8.23.custom.css" rel="stylesheet" type="text/css" />
 
   {% block css %}
   {% endblock %}
 
-  <script src="{{ STATIC_URL }}js/libs/modernizr.custom.43051.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/modernizr.custom.90568.js"></script>
 </head>
 <body class="{% block body_class %}{% endblock %} main">
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -32,7 +33,10 @@
   {% block footer %}
   {% endblock %}
   </footer>
-
+  
+  <script src="{{ STATIC_URL }}js/libs/jquery-1.8.2.min.js"></script>
+  <script src="{{ STATIC_URL }}js/libs/jquery-ui-1.8.23.custom.min.js"></script>
+  
   {% block javascript %}
   {% endblock %}
 
