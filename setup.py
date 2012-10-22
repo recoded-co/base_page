@@ -19,7 +19,6 @@ setup(
             "static/img/*.svg",
             "static/js/*.js",
             "static/js/libs/*.js",
-            "static/js/libs/*.js",
             "static/js/libs/theme/default/*.css",
             "static/js/libs/theme/default/img/*",
             "static/css/ui-lightness/*.css",
