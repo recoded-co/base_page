@@ -99,6 +99,10 @@
     <div id="content">
         {% block content %}
         {% endblock %}
+<br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <div id="koristeet" style="position:absolute;left:10px;bottom:0px;z-index:+1;">
+    <img src="{{STATIC_URL}}talot.png" style="width:90px;" />
     </div>
 </div>
 <div class="span_right">
@@ -182,6 +186,7 @@
 
 <!-- for bigger displays -->
 <div class="span_left hidden_for_small">
+    <img src="{{STATIC_URL}}paikka_logo_oranssi.png" style="width:115px;padding:0 10px 7px 5px;" />
     <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
         {% trans "Give feedback for the service" %}
     </a>
