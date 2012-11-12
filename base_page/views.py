@@ -6,7 +6,6 @@ from django.template import RequestContext
 from django.utils import translation
 from base_page.forms import FeedbackForm
 from base_page.models import Feedback
-from base_page.models import OrganizationSetting
 
 def set_language(request):
 
@@ -78,3 +77,13 @@ def feedback(request):
                                      'site': Site.objects.get_current().id,
                                      'next': next_page},
                                     context_instance=RequestContext(request))
+        
+        
+def osmextra(request):
+    """
+    This function is to provide the extra javascript for admin openstreetmap
+    """
+    print 'osmextra view function'
+    return render_to_response('OSMextra.js',
+                              context_instance=RequestContext(request),
+                              mimetype='text/javascript')

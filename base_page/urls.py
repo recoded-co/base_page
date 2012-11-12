@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.conf.urls.defaults import patterns
 from django.conf.urls.defaults import url
 
@@ -10,4 +9,7 @@ urlpatterns = patterns('base_page.views',
             url(r'feedback/',
                 'feedback',
                 name='feedback'),
+            url(r'osmextra.js',
+                'osmextra',
+                name='osmextra'),
         )
