@@ -83,7 +83,6 @@ def osmextra(request):
     """
     This function is to provide the extra javascript for admin openstreetmap
     """
-    print 'osmextra view function'
     return render_to_response('OSMextra.js',
                               context_instance=RequestContext(request),
                               mimetype='text/javascript')
