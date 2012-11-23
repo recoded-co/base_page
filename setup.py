@@ -19,6 +19,7 @@ setup(
             "static/img/*.svg",
             "static/js/*.js",
             "static/js/libs/*.js",
+            "static/js/libs/img/*.png",
             "static/js/libs/i18n/*.js",
             "static/js/libs/theme/default/*.css",
             "static/js/libs/theme/default/img/*",
