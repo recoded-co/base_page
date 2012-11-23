@@ -150,7 +150,7 @@ header .span_right .login {
     top: 56px;
     width: 100%;
     background-color: white;
-    border-bottom-left-radius: 70px 70px;
+    /*border-bottom-left-radius: 70px 70px;*/
     overflow: hidden;
 }
 
