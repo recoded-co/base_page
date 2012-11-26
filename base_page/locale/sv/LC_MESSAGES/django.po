@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-#
+# 
 # Translators:
+#   <kristoffer.snabb@geonition.org>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-26 13:50+0200\n"
-"PO-Revision-Date: 2012-09-11 11:58+0000\n"
+"POT-Creation-Date: 2012-11-26 14:03+0200\n"
+"PO-Revision-Date: 2012-11-26 12:09+0000\n"
 "Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
-"Language-Team: Swedish (http://www.transifex.com/projects/p/geonition/"
-"language/sv/)\n"
-"Language: sv\n"
+"Language-Team: Swedish (http://www.transifex.com/projects/p/geonition/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base_map.html:4
@@ -56,7 +56,7 @@ msgstr "registrera"
 
 #: templates/base_map.html:82 templates/base_map.html.py:143
 msgid "as a user"
-msgstr "dig som en användare"
+msgstr "dig som användare"
 
 #: templates/base_map.html:121
 msgid "Change language of the service to"
@@ -69,7 +69,7 @@ msgstr "Ändra din profil härifrån:"
 #: templates/base_map.html:149 templates/base_map.html.py:186
 #: templates/base_page.html:69
 msgid "Give feedback for the service"
-msgstr "Ge respons för servicen"
+msgstr "Ge respons om servicen"
 
 #: templates/base_map.html:154
 msgid "This serivce is provided by"
