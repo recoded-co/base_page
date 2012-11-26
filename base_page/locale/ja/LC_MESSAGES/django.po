@@ -1,20 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
+#   <ehsan_ahmadi@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-11 06:56-0500\n"
-"PO-Revision-Date: 2012-09-11 11:35+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Japanese (http://www.transifex.com/projects/p/geonition/language/ja/)\n"
+"POT-Creation-Date: 2012-11-26 13:50+0200\n"
+"PO-Revision-Date: 2012-09-14 14:44+0000\n"
+"Last-Translator: ehsansan <ehsan_ahmadi@yahoo.com>\n"
+"Language-Team: Japanese (http://www.transifex.com/projects/p/geonition/"
+"language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: templates/base_map.html:4
@@ -23,7 +25,7 @@ msgstr ""
 
 #: templates/base_map.html:41 templates/base_page.html:37
 msgid "City"
-msgstr ""
+msgstr "都市"
 
 #: templates/base_map.html:50 templates/base_page.html:44
 msgid "Help us improve our city"
@@ -31,19 +33,19 @@ msgstr ""
 
 #: templates/base_map.html:60 templates/base_map.html.py:115
 msgid "Hello"
-msgstr ""
+msgstr "こんにちは"
 
 #: templates/base_map.html:64 templates/base_map.html.py:134
 msgid "profile"
-msgstr ""
+msgstr "ロフィール"
 
 #: templates/base_map.html:72 templates/base_map.html.py:118
 msgid "sign out"
-msgstr ""
+msgstr "サインアウト"
 
 #: templates/base_map.html:79 templates/base_map.html.py:140
 msgid "sign in"
-msgstr ""
+msgstr "サインイン"
 
 #: templates/base_map.html:80 templates/base_map.html.py:141
 msgid "or"
@@ -51,7 +53,7 @@ msgstr ""
 
 #: templates/base_map.html:81 templates/base_map.html.py:142
 msgid "register"
-msgstr ""
+msgstr "登録"
 
 #: templates/base_map.html:82 templates/base_map.html.py:143
 msgid "as a user"
@@ -80,21 +82,21 @@ msgstr ""
 
 #: templates/base_map.html:175
 msgid "Map"
-msgstr ""
+msgstr "地図"
 
 #: templates/base_map.html:178
 msgid "Settings"
-msgstr ""
+msgstr "設定"
 
 #: templates/base_page.html:54
 msgid "in"
 msgstr ""
 
-#: templates/feedback.html:9
+#: templates/feedback.html:8
 msgid "Palautetta"
 msgstr ""
 
-#: templates/feedback.html:12
+#: templates/feedback.html:11
 msgid "You can write your feedback in the textbox below"
 msgstr ""
 

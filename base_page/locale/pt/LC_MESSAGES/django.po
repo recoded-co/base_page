@@ -1,25 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
+#   <fred.lopes3@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-11 06:56-0500\n"
-"PO-Revision-Date: 2012-09-11 12:03+0000\n"
-"Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
-"Language-Team: Portuguese (http://www.transifex.com/projects/p/geonition/language/pt/)\n"
+"POT-Creation-Date: 2012-11-26 13:50+0200\n"
+"PO-Revision-Date: 2012-09-14 10:19+0000\n"
+"Last-Translator: FredGIS <fred.lopes3@gmail.com>\n"
+"Language-Team: Portuguese (http://www.transifex.com/projects/p/geonition/"
+"language/pt/)\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base_map.html:4
 msgid "SoftGIS service for participative urban planning"
-msgstr ""
+msgstr " Serviço SoftGIS para planeamento urbano participativo"
 
 #: templates/base_map.html:41 templates/base_page.html:37
 msgid "City"
@@ -59,11 +61,11 @@ msgstr "como utilizador"
 
 #: templates/base_map.html:121
 msgid "Change language of the service to"
-msgstr ""
+msgstr "Altera a língua do serviço para"
 
 #: templates/base_map.html:132
 msgid "Change your profile settings from here:"
-msgstr ""
+msgstr "Altera as tuas definições de perfil a partir daqui:"
 
 #: templates/base_map.html:149 templates/base_map.html.py:186
 #: templates/base_page.html:69
@@ -72,29 +74,29 @@ msgstr "Comenta o serviço"
 
 #: templates/base_map.html:154
 msgid "This serivce is provided by"
-msgstr ""
+msgstr "Este serviço é fornecido por"
 
 #: templates/base_map.html:172
 msgid "Main"
-msgstr ""
+msgstr "Principal"
 
 #: templates/base_map.html:175
 msgid "Map"
-msgstr ""
+msgstr "Mapa"
 
 #: templates/base_map.html:178
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #: templates/base_page.html:54
 msgid "in"
 msgstr "em"
 
-#: templates/feedback.html:9
+#: templates/feedback.html:8
 msgid "Palautetta"
 msgstr "Comentários"
 
-#: templates/feedback.html:12
+#: templates/feedback.html:11
 msgid "You can write your feedback in the textbox below"
 msgstr "Podes escrever os teus comentários na caixa de texto abaixo"
 
