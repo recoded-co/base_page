@@ -53,35 +53,6 @@
     </div>
 </div>
 <div class="span_right">
-    {% if user.is_authenticated and user.has_usable_password %}
-    <table class="auth_container">
-        <tr>
-            <td>
-                {% trans "Hello"%} {{ user }}!
-            </td>
-            <td>
-                <a href="{% url profile %}?next={{ request.path }}">
-                    {% trans "profile" %}
-                </a>
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>
-                <a href="{% url logout %}?next={{ request.path }}">
-                    {% trans "sign out" %}
-                </a>
-            </td>
-        </tr>
-    </table>
-    {% else %}
-    <div class="login">
-        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
-        {% trans "or" %}
-        <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
-        {% trans "as a user" %}
-    </div>
-    {% endif %}
     <div id="languages">
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
