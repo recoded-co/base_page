@@ -67,7 +67,7 @@ class OrganizationSetting(models.Model):
                                                         'SPATIAL_REFERENCE_SYSTEM_ID',
                                                         4326))
     on_site = CurrentSiteManager()
-
+    objects = geomodel.GeoManager()
 
     def __unicode__(self):
         return u"%s" % (self.site.name,)
