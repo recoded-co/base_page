@@ -214,6 +214,10 @@ header .span_right .login {
     position: absolute !important;
 }
 
+.olControlAttribution {
+    bottom: 0;
+}
+
 footer {
     position: absolute;
     bottom: 0%;
