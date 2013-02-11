@@ -53,6 +53,16 @@
     </div>
 </div>
 <div class="span_right">
+    {% if user.is_authenticated and user.has_usable_password %}
+    <div class="auth_container">
+        {% trans "Hello"%} {{ user }}!
+        <a href="{% url logout %}?next={{ request.path }}">{% trans "sign out" %}</a>
+    </div>
+    {% else %}
+    <div class="login">
+        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+    </div>
+    {% endif %}
     <div id="languages">
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
