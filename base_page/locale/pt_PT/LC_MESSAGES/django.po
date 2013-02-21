@@ -4,20 +4,19 @@
 # 
 # Translators:
 #   <fred.lopes3@gmail.com>, 2012.
-#  <geisabugs@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-02-21 03:36-0600\n"
-"PO-Revision-Date: 2013-02-20 18:41+0000\n"
-"Last-Translator: geisab <geisabugs@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/geonition/language/pt_BR/)\n"
+"PO-Revision-Date: 2013-02-20 13:20+0000\n"
+"Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
+"Language-Team: Portuguese (Portugal) (http://www.transifex.com/projects/p/geonition/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base_map.html:4
 msgid "SoftGIS service for participative urban planning"
@@ -29,7 +28,7 @@ msgstr "Cidade"
 
 #: templates/base_map.html:50 templates/base_page.html:44
 msgid "Help us improve our city"
-msgstr "Ajude-nos a melhorar a nossa cidade"
+msgstr "Ajuda-nos a melhorar a nossa cidade"
 
 #: templates/base_map.html:60 templates/base_map.html.py:115
 msgid "Hello"
@@ -57,20 +56,20 @@ msgstr "registar"
 
 #: templates/base_map.html:82 templates/base_map.html.py:143
 msgid "as a user"
-msgstr "como usuário"
+msgstr "como utilizador"
 
 #: templates/base_map.html:121
 msgid "Change language of the service to"
-msgstr "Alterar o idioma do serviço para"
+msgstr "Altera a língua do serviço para"
 
 #: templates/base_map.html:132
 msgid "Change your profile settings from here:"
-msgstr "Altere as configurações do seu perfil aqui:"
+msgstr "Altera as tuas definições de perfil a partir daqui:"
 
 #: templates/base_map.html:149 templates/base_map.html.py:186
 #: templates/base_page.html:69
 msgid "Give feedback for the service"
-msgstr "Dar feedback para o serviço"
+msgstr "Comenta o serviço"
 
 #: templates/base_map.html:154
 msgid "This serivce is provided by"
@@ -86,7 +85,7 @@ msgstr "Mapa"
 
 #: templates/base_map.html:178
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Definições"
 
 #: templates/base_page.html:54
 msgid "in"
@@ -98,15 +97,15 @@ msgstr "Comentários"
 
 #: templates/feedback.html:11
 msgid "You can write your feedback in the textbox below"
-msgstr "Você pode escrever o seu comentário na caixa de texto abaixo"
+msgstr "Podes escrever os teus comentários na caixa de texto abaixo"
 
 #: templates/feedback.html:20
 msgid "Send feedback"
-msgstr "Enviar comentários"
+msgstr "Envia comentários"
 
 #: templates/admin/base_site.html:4
 msgid "softGIS site admin"
-msgstr "softGIS sítio admin"
+msgstr "softGIS site admin"
 
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
