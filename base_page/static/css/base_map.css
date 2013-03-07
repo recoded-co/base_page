@@ -203,6 +203,7 @@ header .span_right .login {
 }
 
 #map {
+    background-color: #f1f7e6;
     position: absolute;
     top: 0px;
     bottom: 0px;
