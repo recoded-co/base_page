@@ -16,6 +16,7 @@ def organization(request):
         org_settings = {}
 
     return {'org_settings': org_settings,
+            'LOGO_FILENAME':getattr(settings,'LOGO_FILENAME',''),
             'ANALYTICS_TEMPLATE': getattr(settings,
                                           'ANALYTICS_TEMPLATE',
                                           'analytics.js')}
