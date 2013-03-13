@@ -217,6 +217,7 @@ header .span_right .login {
 
 .olControlAttribution {
     top: 0;
+    bottom: auto !important;
 }
 
 footer {
