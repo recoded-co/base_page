@@ -4,13 +4,14 @@
 # 
 # Translators:
 # FredGIS <fred.lopes3@gmail.com>, 2012
+# FredGIS <fred.lopes3@gmail.com>, 2012
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-07 19:00-0500\n"
-"PO-Revision-Date: 2012-09-14 10:19+0000\n"
-"Last-Translator: FredGIS <fred.lopes3@gmail.com>\n"
+"POT-Creation-Date: 2013-04-14 19:00-0500\n"
+"PO-Revision-Date: 2013-04-27 08:52+0000\n"
+"Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
 "Language-Team: Portuguese (http://www.transifex.com/projects/p/geonition/language/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
