@@ -215,7 +215,7 @@ header .span_right .login {
     position: absolute !important;
 }
 
-.olControlAttribution {
+.olControlAttribution, .olLayerGoogleCopyright {
     top: 0;
     bottom: auto !important;
 }
