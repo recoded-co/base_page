@@ -215,8 +215,17 @@ header .span_right .login {
     position: absolute !important;
 }
 
+#map div.olControlZoom{
+    top: 20px;
+}
 .olControlAttribution, .olLayerGoogleCopyright {
     top: 0;
+    position: absolute;
+    bottom: auto !important;
+}
+.olLayerGoogleV3.olLayerGooglePoweredBy {
+    top: 15;
+    position: absolute;
     bottom: auto !important;
 }
 
