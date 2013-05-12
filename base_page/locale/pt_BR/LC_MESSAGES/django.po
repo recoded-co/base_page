@@ -11,9 +11,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-28 19:00-0500\n"
-"PO-Revision-Date: 2013-04-29 08:50+0000\n"
-"Last-Translator: ksnabb <kristoffer.snabb@geonition.org>\n"
+"POT-Creation-Date: 2013-05-05 19:00-0500\n"
+"PO-Revision-Date: 2013-05-07 09:40+0000\n"
+"Last-Translator: geisab <geisabugs@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/projects/p/geonition/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -72,7 +72,7 @@ msgstr "Altere as configurações do seu perfil aqui:"
 #: templates/base_map.html:149 templates/base_map.html.py:186
 #: templates/base_page.html:69
 msgid "Give feedback for the service"
-msgstr "Dar feedback para o serviço"
+msgstr "Fazer sugestões"
 
 #: templates/base_map.html:154
 msgid "This serivce is provided by"
