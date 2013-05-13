@@ -276,6 +276,7 @@ footer .span_right {
     margin-right: 20px;
     margin-left: 20px;
     color: white;
+    font-size: 0.85em;
 }
 .center {
     width: 50%;
@@ -368,6 +369,7 @@ ul.breadcrumb li.separator {
     /* remove rounded border */
     #main {
         border-bottom-left-radius: 0 0;
+        bottom: 40px;
     }
     /* hide for small */
     .hidden_for_small {
