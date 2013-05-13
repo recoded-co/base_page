@@ -72,7 +72,7 @@ header .span_right {
 }
 
 header .auth_container {
-    float: left;
+    float: right;
 }
 
 header .auth_container td {
@@ -131,22 +131,25 @@ header .span_right {
 }
 header .span_right .login {
     display: inline-block;
-    width: 50%;
+    width: 100px;
+    float: right;
+    font-size: 0.75em;
 }
 
 #languages {
     width: 100px;
     float: right;
+    font-size: 0.75em;
+    margin-right: 20px;
 }
 
 #languages a {
     display: block;
-    font-size: 0.75em;
 }
 
 #main {
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
     top: 56px;
     width: 100%;
     background-color: white;
@@ -251,9 +254,10 @@ footer a:visited {
 }
 
 #feedback {
-    background: url("../img/icons.png") no-repeat scroll -1px -79px transparent;
+    float: right;
     color: white;
-    padding-left: 23px;
+    margin-right: 20px;
+    font-size: 0.75em;
 }
 
 footer .span_right {
@@ -270,6 +274,7 @@ footer .span_right {
 #provider {
     float: right;
     margin-right: 20px;
+    margin-left: 20px;
     color: white;
 }
 .center {

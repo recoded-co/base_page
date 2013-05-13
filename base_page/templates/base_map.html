@@ -52,7 +52,16 @@
         </div>
     </div>
 </div>
-<div class="span_right">
+<div class="span_right hidden_for_small">
+    <div id="provider">
+        <a href="{{ org_settings.provider_url }}" target="_blank">
+            {% if org_settings %}
+                {{ org_settings.provider }}
+            {% else %}
+                Geonition {% now "Y" %}
+            {% endif %}
+        </a>
+    </div>
     {% if user.is_authenticated and user.has_usable_password %}
     <table class="auth_container">
         <tr>
@@ -76,13 +85,17 @@
     </table>
     {% else %}
     <div class="login">
+        {% trans "If you are admin," %}<br />
         <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+        {% comment %}
         {% trans "or" %}
         <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
         {% trans "as a user" %}
+        {% endcomment %}
     </div>
     {% endif %}
     <div id="languages">
+        {% trans "Change language:" %}<br />
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
                 <a href="{% url set_language %}?lang={{ lang.0 }}">
@@ -90,6 +103,11 @@
                 </a>
             {% endifnotequal %}
         {% endfor %}
+    </div>
+    <div>
+        <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
+            {% trans "Give feedback for the service" %}
+        </a>
     </div>
 </div>
 {% endblock header %}
@@ -181,6 +199,7 @@
 </div>
 
 <!-- for bigger displays -->
+    {% comment %}
 <div class="span_left hidden_for_small">
     <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
         {% trans "Give feedback for the service" %}
@@ -216,4 +235,5 @@
         <!-- <![endif]-->
     </div>
 </div>
+    {% endcomment %}
 {% endblock footer %}
