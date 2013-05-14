@@ -1,5 +1,6 @@
 {% extends "index.html" %}
 {% load i18n %}
+{% load url from future %}
 
 {% block description %}{% blocktrans %}SoftGIS service for participative urban planning{% endblocktrans %}{% endblock %}
 
@@ -30,7 +31,7 @@
 {% block header %}
 <div class="span_left">
     <div id="city_logo">
-        <div id="city_name" class="base_textcolor" onclick="window.location = '{% url dashboard %}'">
+        <div id="city_name" class="base_textcolor" onclick="window.location = '{% url 'dashboard' %}'">
 
         <img alt="softgis" src="{{ STATIC_URL }}img/bubble.svg" height="17" width="16" />
         <!--<img alt="pehmogis" src="{{ STATIC_URL }}img/pehmogis-logo.png" height="22" width="82" />-->
@@ -70,7 +71,7 @@
                 {% trans "Hello"%} {{ user }}!
             </td>
             <td>
-                <a href="{% url profile %}?next={{ request.path }}">
+                <a href="{% url 'profile' %}?next={{ request.path }}">
                     {% trans "profile" %}
                 </a>
             </td>
@@ -78,7 +79,7 @@
         <tr>
             <td></td>
             <td>
-                <a href="{% url logout %}?next={{ request.path }}">
+                <a href="{% url 'logout' %}?next={{ request.path }}">
                     {% trans "sign out" %}
                 </a>
             </td>
@@ -87,7 +88,7 @@
     {% else %}
     <div class="login">
         {% trans "If you are admin," %}<br />
-        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+        <a href="{% url 'login' %}?next={% url 'questionnaire_admin_home' %}">{% trans 'sign in' %}</a>
         {% comment %}
         {% trans "or" %}
         <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
@@ -99,14 +100,14 @@
         {% trans "Change language:" %}<br />
         {% for lang in LANGUAGES %}
             {% ifnotequal LANGUAGE_CODE lang.0 %}
-                <a href="{% url set_language %}?lang={{ lang.0 }}">
+                <a href="{% url 'set_language' %}?lang={{ lang.0 }}">
                     {{ lang.1 }}
                 </a>
             {% endifnotequal %}
         {% endfor %}
     </div>
     <div>
-        <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
+        <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
             {% trans "Give feedback for the service" %}
         </a>
     </div>
@@ -133,14 +134,14 @@
     <p>        
     {% trans "Hello"%} {{ user }}!
     <br />
-    <a href="{% url logout %}?next={{ request.path }}">
+    <a href="{% url 'logout' %}?next={{ request.path }}">
         {% trans "sign out" %}
     </a>
     </p>
     <p>{% trans "Change language of the service to" %}:
     {% for lang in LANGUAGES %}
         {% ifnotequal LANGUAGE_CODE lang.0 %}
-            <a href="{% url set_language %}?lang={{ lang.0 }}">
+            <a href="{% url 'set_language' %}?lang={{ lang.0 }}">
                 {{ lang.1 }}
             </a>
         {% endifnotequal %}
@@ -149,22 +150,22 @@
     
     <p>
     {% trans "Change your profile settings from here:" %}
-    <a href="{% url profile %}?next={{ request.path }}">
+    <a href="{% url 'profile' %}?next={{ request.path }}">
         {% trans "profile" %}
     </a>
     </p>
     
     {% else %}
     <p>
-        <a href="{% url login %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+        <a href="{% url 'login' %}?next={{ request.path }}">{% trans 'sign in' %}</a>
         {% trans "or" %}
-        <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
+        <a href="{% url 'register' %}?next={{ request.path }}">{% trans 'register' %}</a>
         {% trans "as a user" %}
     </p>
     {% endif %}
     
     <p>
-        <a href="{% url feedback %}?next={{ request.path }}">
+        <a href="{% url 'feedback' %}?next={{ request.path }}">
             {% trans "Give feedback for the service" %}
         </a>
     </p>
