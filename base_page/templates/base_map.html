@@ -88,23 +88,25 @@
     {% else %}
     <div class="login">
         {% trans "If you are admin," %}<br />
-        <a href="{% url 'login' %}?next={% url 'questionnaire_admin_home' %}">{% trans 'sign in' %}</a>
+        <a href="{% url 'login' %}?next={{ LOGIN_REDIRECT_URL }}">{% trans 'sign in' %}</a>
         {% comment %}
         {% trans "or" %}
-        <a href="{% url register %}?next={{ request.path }}">{% trans 'register' %}</a>
+        <a href="{% url 'register' %}?next={{ request.path }}">{% trans 'register' %}</a>
         {% trans "as a user" %}
         {% endcomment %}
     </div>
     {% endif %}
     <div id="languages">
-        {% trans "Change language:" %}<br />
-        {% for lang in LANGUAGES %}
-            {% ifnotequal LANGUAGE_CODE lang.0 %}
-                <a href="{% url 'set_language' %}?lang={{ lang.0 }}">
-                    {{ lang.1 }}
-                </a>
-            {% endifnotequal %}
-        {% endfor %}
+        {% if LANGUAGES|length > 1 %}
+            {% trans "Change language:" %}<br />
+            {% for lang in LANGUAGES %}
+                {% ifnotequal LANGUAGE_CODE lang.0 %}
+                    <a href="{% url 'set_language' %}?lang={{ lang.0 }}">
+                        {{ lang.1 }}
+                    </a>
+                {% endifnotequal %}
+            {% endfor %}
+        {% endif %}
     </div>
     <div>
         <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
