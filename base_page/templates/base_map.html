@@ -87,13 +87,16 @@
     </table>
     {% else %}
     <div class="login">
-        {% trans "If you are admin," %}<br />
-        <a href="{% url 'login' %}?next={{ LOGIN_REDIRECT_URL }}">{% trans 'sign in' %}</a>
-        {% comment %}
-        {% trans "or" %}
-        <a href="{% url 'register' %}?next={{ request.path }}">{% trans 'register' %}</a>
-        {% trans "as a user" %}
-        {% endcomment %}
+        {% if USER_REGISTRATION_ENABLED %}
+            <a href="{% url 'login' %}?next={{ request.path }}">{% trans 'sign in' %}</a>
+            {% trans "or" %}
+            <a href="{% url 'register' %}?next={{ request.path }}">{% trans 'register' %}
+            {% trans "as a user" %}</a>
+
+        {% else %}
+            {% trans "If you are admin," %}<br />
+            <a href="{% url 'login' %}?next={{ LOGIN_REDIRECT_URL }}">{% trans 'sign in' %}</a>
+        {% endif %}
     </div>
     {% endif %}
     <div id="languages">

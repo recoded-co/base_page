@@ -18,4 +18,8 @@ def organization(request):
     return {'org_settings': org_settings,
             'ANALYTICS_TEMPLATE': getattr(settings,
                                           'ANALYTICS_TEMPLATE',
-                                          'analytics.js')}
+                                          'analytics.js'),
+            'USER_REGISTRATION_ENABLED': getattr(settings,
+                                          'USER_REGISTRATION_ENABLED',
+                                          False),
+            }
