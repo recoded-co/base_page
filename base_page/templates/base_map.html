@@ -54,6 +54,11 @@
     </div>
 </div>
 <div class="span_right hidden_for_small">
+    {% if request.META.HTTP_HOST == "demo.asiatkartalle.fi" %}
+    <div style="float:left">
+        <a href="/questionnaire_admin/">Kokeile hallintatyökalua!</a>
+    </div>
+    {% endif %}
     <div id="provider">
         {% trans "Provided by" %} <br />
         <a href="{{ org_settings.provider_url }}" target="_blank">
