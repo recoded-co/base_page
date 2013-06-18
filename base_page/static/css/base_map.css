@@ -1,6 +1,9 @@
 /*
  THE MAIN STYLE
 */
+.olFramedCloudPopupContent {
+    min-width: 230px;
+}
 html {
     overflow: hidden;
 }
