@@ -31,7 +31,7 @@
 {% block header %}
 <div class="span_left">
     {% if LOGO_FILENAME != "" %}
-    <img src="{{STATIC_URL}}img/{{LOGO_FILENAME}}" />
+    <a href="{% url 'dashboard' %}"><img src="{{STATIC_URL}}img/{{LOGO_FILENAME}}" /></a>
     {% else %}
     <div id="city_logo">
         <div id="city_name" class="base_textcolor" onclick="window.location = '{% url 'dashboard' %}'">
