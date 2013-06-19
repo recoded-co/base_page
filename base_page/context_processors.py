@@ -22,4 +22,7 @@ def organization(request):
             'USER_REGISTRATION_ENABLED': getattr(settings,
                                           'USER_REGISTRATION_ENABLED',
                                           False),
+            'LOGO_FILENAME': getattr(settings,
+                                          'LOGO_FILENAME',
+                                          ''),
             }
