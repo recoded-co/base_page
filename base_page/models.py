@@ -31,7 +31,7 @@ class Feedback(models.Model):
         if self.content != "":
             send_mail('Feedback for the softGIS application',
                     self.content,
-                    'do-not-reply@pehmogis.fi',
+                    'support@mapita.fi',
                     [admin[1] for admin in settings.ADMINS],
                     fail_silently=True)
 
