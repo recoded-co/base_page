@@ -1,10 +1,11 @@
 {% extends "base_map.html" %}
+{% load url from future %}
 {% load i18n %}
 
 {% block body_class %}base_map base_bgcolor settings{% endblock %}
 
 {% block content %}
-<form name="feedback" action="{% url feedback %}" method="post">
+<form name="feedback" action="{% url 'feedback' %}" method="post">
     <h1>{% trans "Palautetta" %}</h1>
 
     <p>
