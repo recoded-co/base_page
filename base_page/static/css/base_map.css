@@ -133,10 +133,8 @@ header .span_right {
     padding: 5px;
 }
 header .span_right .login {
-    display: inline-block;
-    width: 100px;
     float: right;
-    font-size: 0.75em;
+    font-size: 11px;
 }
 
 #languages {

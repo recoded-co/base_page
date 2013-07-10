@@ -64,7 +64,7 @@
     </div>
     {% endif %}
     <div id="provider">
-        {% trans "Provided by" %} <br />
+        {% trans "Provided by" %}
         <a href="{{ org_settings.provider_url }}" target="_blank">
             {% if org_settings %}
                 {{ org_settings.provider }}
@@ -103,7 +103,7 @@
             {% trans "as a user" %}</a>
 
         {% else %}
-            {% trans "If you are admin," %}<br />
+            {% trans "Admin," %}
             <a href="{% url 'login' %}?next={{ LOGIN_REDIRECT_URL }}">{% trans 'sign in' %}</a>
         {% endif %}
     </div>
