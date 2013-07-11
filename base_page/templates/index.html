@@ -47,6 +47,21 @@
   
   //OpenLayers image path
   OpenLayers.ImgPath = "{{ STATIC_URL }}img/";
+    // Add gradient
+    $(document).ready(function(){
+        var new_components = color_components = $('.base_bgcolor').css('background-color');
+        old_components = color_components.match(/\d+/g);
+        var darker,original;
+        for (i=0;i<old_components.length;i++){
+            original = parseInt(old_components[i]);
+            darker = original > 30 ? original - 30 : 0;
+            new_components = new_components.replace(original,darker);
+        }
+        $('.base-gradient').css('background','linear-gradient(' + new_components + ',' + color_components + ')');
+        $('body').css('background','linear-gradient(' + new_components + ',' + color_components + ')');
+        $('.base_bgcolor').css('background-color',new_components);
+    });
+
   </script>
 </body>
 </html>
