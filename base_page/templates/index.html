@@ -18,6 +18,15 @@
   {% endblock %}
 
   <script src="{{ STATIC_URL }}js/libs/modernizr.custom.90568.js"></script>
+ <script type="text/javascript">
+
+  {% block google_analytics %}
+      {% include ANALYTICS_TEMPLATE %}
+  {% endblock %}
+  
+</script>
+
+
 </head>
 <body class="{% block body_class %}{% endblock %} main">
   <!--[if lt IE 8]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -41,10 +50,6 @@
   {% endblock %}
 
   <script>
-  {% block google_analytics %}
-      {% include ANALYTICS_TEMPLATE %}
-  {% endblock %}
-  
   //OpenLayers image path
   OpenLayers.ImgPath = "{{ STATIC_URL }}img/";
   </script>
