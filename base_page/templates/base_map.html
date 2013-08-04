@@ -21,7 +21,7 @@
 }
 * {
 	font-family: 	{% if org_settings.font %}
-		                {{ org_settings.font|safe }};
+		                {{ org_settings.font|safe }} !important;
 		            {% else %}
 		            	'Enriqueta', serif;
 		            {% endif %}
