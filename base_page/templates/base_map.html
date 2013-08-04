@@ -19,6 +19,13 @@
 .base_textcolor {
     color: {% if org_settings %}{{ org_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
+* {
+	font-family: 	{% if org_settings.font %}
+		                {{ org_settings.font|safe }};
+		            {% else %}
+		            	'Enriqueta', serif;
+		            {% endif %}
+}
 </style>
 
 {% block stylesheet %}
