@@ -14,6 +14,10 @@ body {
     color: #646464;
 }
 
+form.popupform{
+	font-size: 0.8em !important;
+}
+
 .ui-widget {
     font-size: 0.8em !important;
     font-family: 'Enriqueta', serif !important;
