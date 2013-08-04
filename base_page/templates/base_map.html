@@ -104,6 +104,7 @@
         {% endif %}
     </div>
     {% endif %}
+{% comment %}
     <div id="languages">
         {% if LANGUAGES|length > 1 %}
             {% trans "Change language:" %}<br />
@@ -116,6 +117,7 @@
             {% endfor %}
         {% endif %}
     </div>
+{% endcomment %}
     <div>
         <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
             {% trans "Give feedback for the service" %}
