@@ -67,9 +67,11 @@ class OrganizationSetting(models.Model):
                                                         'SPATIAL_REFERENCE_SYSTEM_ID',
                                                         4326))
     
-    FONTS_LIST = (('Times, "Times New Roman", Georgia, serif', 'Times, "Times New Roman", Georgia, serif'),
+    FONTS_LIST =    (('Times, "Times New Roman", Georgia, serif', 'Times, "Times New Roman", Georgia, serif'),
                     ('Verdana, Arial, Helvetica, sans-serif', 'Verdana, Arial, Helvetica, sans-serif'),
                     ('"Lucida Console", Courier, monospace', '"Lucida Console", Courier, monospace'),
+                    ('"Arial CE", sans-serif', '"Arial CE", sans-serif'),
+                    ('"Enriqueta", serif ','"Enriqueta", serif '),
                     ('cursive', 'cursive'),
                     ('fantasy', 'fantasy'))
     
