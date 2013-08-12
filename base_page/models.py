@@ -76,6 +76,8 @@ class OrganizationSetting(models.Model):
                     ('fantasy', 'fantasy'))
     
     font = models.CharField(max_length = 50, choices=FONTS_LIST);
+    FONT_SIZE_LIST = (('1em', '1em'),('0.9em', '0.9em'),('0.8em', '0.8em'),('0.7em', '0.7em'),('0.6em', '0.6em'),('0.5em', '0.5em'),('0.4em', '0.4em'),)
+    font_size = models.CharField(max_length = 6, choices = FONT_SIZE_LIST);
     
     on_site = CurrentSiteManager()
     objects = geomodel.GeoManager()
