@@ -26,6 +26,13 @@
 		            	'Enriqueta', serif;
 		            {% endif %}
 }
+.ui-widget, form.popupform , div.popup_feature_buttons {
+	font-size: 	{% if org_settings.font_size %}
+		                {{ org_settings.font_size|safe }} !important;
+		            {% else %}
+		            	1.0em;
+		            {% endif %}
+}
 </style>
 
 {% block stylesheet %}
