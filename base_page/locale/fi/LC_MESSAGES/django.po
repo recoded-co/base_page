@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # msjohans <mikko.johansson@aalto.fi>, 2013
 # msjohans <mikko.johansson@aalto.fi>, 2013
@@ -11,19 +11,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-24 08:18-0500\n"
+"POT-Creation-Date: 2013-08-03 17:32+0200\n"
 "PO-Revision-Date: 2013-05-24 13:20+0000\n"
 "Last-Translator: sellonen <sakari.ellonen@mapita.fi>\n"
-"Language-Team: Finnish (http://www.transifex.com/projects/p/geonition/language/fi/)\n"
+"Language-Team: Finnish (http://www.transifex.com/projects/p/geonition/"
+"language/fi/)\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: templates/base_map.html:5
 msgid "SoftGIS service for participative urban planning"
-msgstr "Paikka! Laita asiat kartalle. Karttapohjaiset pehmoGIS -kyselyt asukastiedon keräämiseen suunnittelun tueksi"
+msgstr ""
+"Paikka! Laita asiat kartalle. Karttapohjaiset pehmoGIS -kyselyt asukastiedon "
+"keräämiseen suunnittelun tueksi"
 
 #: templates/base_map.html:42 templates/base_page.html:37
 msgid "City"

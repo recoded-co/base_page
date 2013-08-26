@@ -67,13 +67,17 @@ class OrganizationSetting(models.Model):
                                                         'SPATIAL_REFERENCE_SYSTEM_ID',
                                                         4326))
     
-    FONTS_LIST = (('Times, "Times New Roman", Georgia, serif', 'Times, "Times New Roman", Georgia, serif'),
+    FONTS_LIST =    (('Times, "Times New Roman", Georgia, serif', 'Times, "Times New Roman", Georgia, serif'),
                     ('Verdana, Arial, Helvetica, sans-serif', 'Verdana, Arial, Helvetica, sans-serif'),
                     ('"Lucida Console", Courier, monospace', '"Lucida Console", Courier, monospace'),
+                    ('"Arial CE", sans-serif', '"Arial CE", sans-serif'),
+                    ('"Enriqueta", serif ','"Enriqueta", serif '),
                     ('cursive', 'cursive'),
                     ('fantasy', 'fantasy'))
     
     font = models.CharField(max_length = 50, choices=FONTS_LIST);
+    FONT_SIZE_LIST = (('1em', '1em'),('0.9em', '0.9em'),('0.8em', '0.8em'),('0.7em', '0.7em'),('0.6em', '0.6em'),('0.5em', '0.5em'),('0.4em', '0.4em'),)
+    font_size = models.CharField(max_length = 6, choices = FONT_SIZE_LIST);
     
     on_site = CurrentSiteManager()
     objects = geomodel.GeoManager()
