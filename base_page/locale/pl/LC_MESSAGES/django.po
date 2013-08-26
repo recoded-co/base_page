@@ -5,6 +5,7 @@
 # Translators:
 # 2michal3 <mczepkiewicz@yahoo.pl>, 2012
 # 2michal3 <mczepkiewicz@yahoo.pl>, 2012
+# 2darek3 <darek@recoded.co>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
@@ -33,7 +34,7 @@ msgstr "Pomóż ulepszyć miasto"
 
 #: templates/base_map.html:63
 msgid "Provided by"
-msgstr ""
+msgstr "Dostarczone przez"
 
 #: templates/base_map.html:76 templates/base_map.html.py:145
 msgid "Hello"
@@ -70,7 +71,7 @@ msgstr ""
 
 #: templates/base_map.html:109
 msgid "Change language:"
-msgstr ""
+msgstr "Zmień język"
 
 #: templates/base_map.html:121 templates/base_map.html.py:179
 #: templates/base_page.html:69
@@ -119,8 +120,8 @@ msgstr "Wyślij uwagi"
 
 #: templates/admin/base_site.html:4
 msgid "softGIS site admin"
-msgstr ""
+msgstr "Strona administracyjna"
 
 #: templates/admin/base_site.html:7
 msgid "softGIS administration"
-msgstr ""
+msgstr "Administracja stroną"
