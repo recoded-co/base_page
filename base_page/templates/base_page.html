@@ -19,6 +19,13 @@
             #e8ae6a;
             {% endif %}
 }
+* {
+	font-family: 	{% if org_settings.font %}
+		                {{ org_settings.font }};
+		            {% else %}
+		            	"Enriqueta", serif;
+		            {% endif %}
+}
 </style>
 {% block css_extra %}
 {% endblock %}

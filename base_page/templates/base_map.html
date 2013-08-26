@@ -20,6 +20,51 @@
 .base_textcolor {
     color: {% if org_settings %}{{ org_settings.text_color }};{% else %}#e8ae6a;{% endif %}
 }
+* {
+	font-family: 	{% if org_settings.font %}
+		                {{ org_settings.font|safe }} !important;
+		            {% else %}
+		            	'Enriqueta', serif;
+		            {% endif %}
+}
+.ui-widget, form.popupform , div.popup_feature_buttons {
+	font-size: 	{% if org_settings.font_size %}
+		                {{ org_settings.font_size|safe }} !important;
+		            {% else %}
+		            	1.0em;
+		            {% endif %}
+}
+output { 
+      position: absolute;
+      background-image: -moz-linear-gradient(top, #444444, #999999);
+      background-image: -o-linear-gradient(top, #444444, #999999);
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#444444), to(#999999));
+      background-image: -webkit-linear-gradient(top, #444444, #999999);
+      width: 40px; 
+      height: 30px; 
+      text-align: center; 
+      color: white; 
+      border-radius: 10px; 
+      display: inline-block; 
+      font: bold 15px/30px Georgia;
+      bottom: 175%;
+      left: 43%;
+      margin-left: -1%;
+    }
+output:after { 
+	    content: "";
+	    position: absolute;
+	    width: 0;
+	    height: 0;
+	    border-top: 10px solid #999999;
+	    border-left: 5px solid transparent;
+	    border-right: 5px solid transparent;
+	    top: 100%;
+	    left: 50%;
+	    margin-left: -5px;
+	    margin-top: -1px;
+	  }
+
 </style>
 
 {% block stylesheet %}
@@ -109,6 +154,7 @@
         {% endif %}
     </div>
     {% endif %}
+{% comment %}
     <div id="languages">
         {% if LANGUAGES|length > 1 %}
             {% trans "Change language:" %}<br />
@@ -121,6 +167,7 @@
             {% endfor %}
         {% endif %}
     </div>
+{% endcomment %}
     <div>
         <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
             {% trans "Give feedback for the service" %}
@@ -134,11 +181,19 @@
     <div id="content">
         {% block content %}
         {% endblock %}
+        <!--
+        <div id="search_form">
+    	<form name="search_form" action="javascript: geolocate(document.search_form.query.value);" method="post">
+    		<label for="query">Search for address:</label> 
+    		<input type="text" id="query" size=50 name="query" value="Rue des Berges 37 Payerne"/>
+    		<input type="submit" value="Submit"/>
+		</form>
+    	</div>-->
     </div>
 </div>
 <div class="span_right">
     {% block map %}
-    <div id="map">
+        <div id="map">
     </div>
     {% endblock %}
 </div>
