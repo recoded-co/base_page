@@ -1,3 +1,11 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# 2michal3 <mczepkiewicz@yahoo.pl>, 2012
+# 2michal3 <mczepkiewicz@yahoo.pl>, 2012
+# 2darek3 <darek@recoded.co>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: geonition\n"
