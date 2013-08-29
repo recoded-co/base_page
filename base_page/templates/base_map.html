@@ -76,11 +76,12 @@
             {% endif %}
         </a>
     </div>
-    {% if user.is_authenticated and user.has_usable_password %}
+
+    {% if user.is_authenticated and user.has_usable_password or user.is_authenticated and social_auth.associated.oauth2.0 %}
     <table class="auth_container">
         <tr>
             <td>
-                {% trans "Hello"%} {{ user }}!
+                {% trans "Hello"%} {{ user.first_name }} {{ user.last_name }} !
             </td>
             <td>
                 <a href="{% url 'profile' %}?next={{ request.path }}">
@@ -128,7 +129,9 @@
     <div>
         <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
             {% trans "Give feedback for the service" %}
-        </a>
+        </a><a href="{% url 'socialauth_begin' 'google-oauth2' %}">{% trans "Login with Google" %}</a>
+	<a href="{% url 'socialauth_begin' 'facebook' %}">{% trans "Login with Facebook" %}</a>
+
     </div>
 </div>
 {% endblock header %}
