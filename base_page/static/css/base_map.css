@@ -1,6 +1,9 @@
 /*
  THE MAIN STYLE
 */
+.olFramedCloudPopupContent {
+    min-width: 230px;
+}
 html {
     overflow: hidden;
 }
@@ -10,7 +13,7 @@ body {
     width: 100%;
     font-family: 'Enriqueta', serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 14px;
     color: #646464;
 }
 
@@ -52,7 +55,7 @@ form.popupform{
 }
 
 header {
-    height: 56px;
+    height: 53px;
     overflow: hidden;
     width: 100%;
 }
@@ -63,7 +66,6 @@ header .span_left {
 }
 
 header .span_right {
-    height: 56px;
     color: white;
 }
 
@@ -134,10 +136,8 @@ header .span_right {
     padding: 5px;
 }
 header .span_right .login {
-    display: inline-block;
-    width: 100px;
     float: right;
-    font-size: 0.75em;
+    font-size: 11px;
 }
 
 #languages {
@@ -154,7 +154,7 @@ header .span_right .login {
 #main {
     position: absolute;
     bottom: 0px;
-    top: 56px;
+    top: 53px;
     width: 100%;
     background-color: white;
     /*border-bottom-left-radius: 70px 70px;*/
@@ -471,3 +471,37 @@ mobiles and below
     }
 }
 
+/* PanPanel */
+.olControlPanPanel {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+.olControlPanPanel .olControlPanNorthItemInactive {
+     left: 50%;
+     margin-left: -9px;
+     top: 0;
+}
+.olControlPanPanel .olControlPanSouthItemInactive {
+     left: 50%;
+     margin-left: -9px;
+     top: auto;
+     bottom: 0;
+}
+.olControlPanPanel .olControlPanWestItemInactive {
+     top: 50%;
+     margin-top: -9px;
+     left: 0;
+}
+.olControlPanPanel .olControlPanEastItemInactive {
+     top: 50%;
+     margin-top: -9px;
+     left: auto;
+     right: 0;
+}
+.olControlZoomPanel {
+     left: auto;
+     right: 23px;
+     top: 8px;
+} 

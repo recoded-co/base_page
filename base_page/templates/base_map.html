@@ -1,4 +1,5 @@
 {% extends "index.html" %}
+{% load url from future %}
 {% load i18n %}
 {% load url from future %}
 
@@ -75,6 +76,9 @@ output:after {
 
 {% block header %}
 <div class="span_left">
+    {% if LOGO_FILENAME != "" %}
+    <a href="{% url 'dashboard' %}"><img src="{{STATIC_URL}}img/{{LOGO_FILENAME}}" /></a>
+    {% else %}
     <div id="city_logo">
         <div id="city_name" class="base_textcolor" onclick="window.location = '{% url 'dashboard' %}'">
 
@@ -97,6 +101,7 @@ output:after {
             {% endif %}
         </div>
     </div>
+    {% endif %}
 </div>
 <div class="span_right hidden_for_small">
     {% if request.META.HTTP_HOST == "demo.asiatkartalle.fi" %}
@@ -105,7 +110,7 @@ output:after {
     </div>
     {% endif %}
     <div id="provider">
-        {% trans "Provided by" %} <br />
+        {% trans "Provided by" %}
         <a href="{{ org_settings.provider_url }}" target="_blank">
             {% if org_settings %}
                 {{ org_settings.provider }}
@@ -145,7 +150,7 @@ output:after {
             {% trans "as a user" %}</a>
 
         {% else %}
-            {% trans "If you are admin," %}<br />
+            {% trans "Admin," %}
             <a href="{% url 'login' %}?next={{ LOGIN_REDIRECT_URL }}">{% trans 'sign in' %}</a>
         {% endif %}
     </div>
@@ -265,7 +270,7 @@ output:after {
 <!-- for bigger displays -->
     {% comment %}
 <div class="span_left hidden_for_small">
-    <a id="feedback" href="{% url feedback %}?next={{ request.path }}">
+    <a id="feedback" href="{% url 'feedback' %}?next={{ request.path }}">
         {% trans "Give feedback for the service" %}
     </a>
 </div>
